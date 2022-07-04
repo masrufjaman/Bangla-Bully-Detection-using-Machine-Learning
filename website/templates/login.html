@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <!-- stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/login.css') }}"
+    />
+    <!-- materials icon -->
+    <!-- https://fonts.google.com/icons?icon.style=Sharp&icon.query=close -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="center">
+     <h1>Log in to your account</h1>
+     <form action="customerSignin.php" method="post">
+     <div class="txt_field">
+        <input type="email" name="Email" required>
+        <span></span>
+        <label>Email</label>
+        </div>
+        <div class="txt_field">
+        <input type="password" name="Password"  maxlength="10" required>
+        <span></span>
+        <label>Password</label>
+        </div>
+        <div class="pass">
+            <a href="forgetpass.html">Forgot Password?</a>
+        </div>
+       <input type="submit" value = Submit>
+        <div class="signup_link">
+         Not a member? <a href="register.php">Sign Up</a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

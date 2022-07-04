@@ -1,0 +1,152 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#84B7FE;
+    height: 100vh;
+    overflow:hidden;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    right:50%;
+    transform: translate(-50%, -50%);
+    width:400px;
+    border-radius: 10px;
+}
+.center h1
+{
+    text-align: center;
+    padding: 0 0 20px 0;
+    color:black;
+    margin: 10px;
+    font-size: 20px;
+}
+.center form
+{
+    padding: 0 40px;
+}
+
+form .txt_field{
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    top: 10px;
+    left:6x;
+    margin:25px 0;
+}
+.txt_field input
+{
+    width:100%;
+    padding: 0 5px;
+    height:40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline:none;
+    text-transform: lowercase;
+}
+.txt_field label
+{
+    position:absolute;
+    top: .06px;
+    left:.6x;
+   
+    font-size:16px;
+    pointer-events: none;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label
+{
+    top: -20px;
+    color: black;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before
+{
+    width: 100%;
+}
+form .pass_field{
+    position: relative;
+    margin:30px 0;
+}
+.pass_field input
+{
+    width:100%;
+    padding: 0 5px;
+    height:40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline:none;
+    text-transform: lowercase;
+}
+.pass_field label
+{
+    position:absolute;
+    top:5%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size:16px;
+    pointer-events: none;
+}
+
+.pass_field input:focus ~ label,
+.pass_field input:valid ~ label
+{
+    top: -5px;
+    color: black;
+}
+.pass_field input:focus ~ span::before,
+.pass_field input:valid ~ span::before
+{
+    width: 100%;
+}
+.pass
+{
+    margin: -5px 0 20px 5px;
+    color:black;
+    cursor: pointer;
+    font-size: 16px;
+}
+.pass:hover
+{
+    text-decoration: underline;
+}
+input[type="submit"]
+{
+    box-sizing: border-box;
+    width:30%;
+    height:30px;
+    left:5px;
+    border: 1px solid #000000;
+    background: whitesmoke;
+    font-size: 12px;
+    color:black;
+    font-weight:700;
+    cursor: pointer;
+    outline:none;
+}
+input[type="submit"]:hover
+{
+ border-color: black;
+ transition: .5s;
+}
+.signup_link
+{
+    margin:30px 0;
+    text-align: center;
+    font-size:16px;
+    color:black;
+}
+.signup_link a
+{
+    color:#2691d9;
+    text-decoration: none;
+}
+.signup_link a:hover
+{
+    text-decoration: underline;
+}
