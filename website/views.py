@@ -9,5 +9,7 @@ def home():
 
 @views.route('/profile')
 def profile():
-    return "<h1>Welcome to profile page.</h>"
-    # return render_template("html_file_name.html")   <--- after you create an html page for user_profile webpage
+    # return "<h1>Welcome to profile page.</h>"
+    return render_template("profile.html")  
+
+    
