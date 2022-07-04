@@ -7,7 +7,7 @@ views = Blueprint('views', __name__)
 def home():
     return "<h1>Welcome to homepage.</h>"
 
-@views.route('/help')
+@views.route('/profile')
 def help():
-    return "<h1>Welcome to help page.</h>"
-    # return render_template("html_file_name.html")   <--- after you create an html page for help webpage
+    return "<h1>Welcome to profile page.</h>"
+    # return render_template("html_file_name.html")   <--- after you create an html page for user_profile webpage
