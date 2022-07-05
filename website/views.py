@@ -14,3 +14,8 @@ def login():
 @views.route('/ResetPass')
 def ResetPass():
     return render_template("ResetPass.html")
+
+@views.route('/SignUp')
+def ResetPass():
+    return render_template("SignUp.html")
+
