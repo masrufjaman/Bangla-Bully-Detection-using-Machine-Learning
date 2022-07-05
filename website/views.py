@@ -11,3 +11,6 @@ def home():
 def login():
     return render_template("login.html")
 
+@views.route('/ResetPass')
+def ResetPass():
+    return render_template("ResetPass.html")
