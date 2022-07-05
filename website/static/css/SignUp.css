@@ -6,20 +6,20 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-  height: 100vh;
+  height: 50vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: radial-gradient(#56ab2f,#a8e063);
+  padding: 5px;
+  background: #84B7FE;
 }
 .container{
   max-width: 700px;
+  max-height: 400px;
   width: 100%;
-  background-color: oldlace;
+  background-color: #84B7FE;;
   padding: 25px 30px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  margin: 10px 5px;
+ 
 }
 .container .title{
   font-size: 25px;
@@ -34,17 +34,19 @@ body{
   height: 3px;
   width: 30px;
   border-radius: 5px;
-  background: linear-gradient(#56ab2f,#a8e063);
+  background: #84B7FE;
 }
 .content form .user-details{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
+ 
 }
 form .user-details .input-box{
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
+  background: #84B7FE;
 }
 form .input-box span.details{
   display: block;
@@ -58,13 +60,13 @@ form .input-box span.details{
   font-size: 16px;
   border-radius: 5px;
   padding-left: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #84B7FE;;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
 }
 .user-details .input-box input:focus,
 .user-details .input-box input:valid{
-  border-color: #9b59b6;
+  border-color: #84B7FE;
 }
  form .gender-details .gender-title{
   font-size: 20px;
@@ -93,7 +95,7 @@ form .input-box span.details{
  #dot-1:checked ~ .category label .one,
  #dot-2:checked ~ .category label .two,
  #dot-3:checked ~ .category label .three{
-   background: #9b59b6;
+   background: black;
    border-color: #d9d9d9;
  }
  form input[type="radio"]{
@@ -108,16 +110,16 @@ form .input-box span.details{
    width: 100%;
    border-radius: 5px;
    border: none;
-   color:white;
+   color:black;
    font-size: 18px;
    font-weight: 500;
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(#56ab2f,#a8e063);
+   background: white;
  }
  form .button input:hover{
-  background: linear-gradient(#56ab2f, #a8e063);
+  background:  #84B7FE;
   }
  @media(max-width: 584px){
  .container{
