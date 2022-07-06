@@ -18,3 +18,9 @@ def reset_pass():
 @views.route('/SignUp')
 def SignUp():
     return render_template("SignUp.html")
+
+@views.route('/help')
+def help():
+    # return "<h1>Welcome to help page.</h>"
+    return render_template("help.html")
+    #<--- after you create an html page for help webpage
