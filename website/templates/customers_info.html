@@ -1,0 +1,65 @@
+{% extends 'base_admin.html' %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/admin_dashboard.css') }}"
+/>
+<main>
+  <h1>Customers</h1>
+
+  <div class="date">
+    <input type="date" />
+  </div>
+
+  <div class="recent-customers">
+    <h2>Recent Customer</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Occupation</th>
+          <th>Premium</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Oishi</td>
+          <td>oishi@gmail.com</td>
+          <td>Female</td>
+          <td>Student</td>
+          <td class="warning">Yes</td>
+          <td class="primary">Details</td>
+        </tr>
+        <tr>
+          <td>Nazifa</td>
+          <td>nazifa@gmail.com</td>
+          <td>Female</td>
+          <td>Student</td>
+          <td class="warning">Yes</td>
+          <td class="primary">Details</td>
+        </tr>
+        <tr>
+          <td>Amrin</td>
+          <td>amrin@gmail.com</td>
+          <td>Female</td>
+          <td>Student</td>
+          <td class="warning">No</td>
+          <td class="primary">Details</td>
+        </tr>
+        <tr>
+          <td>Okita</td>
+          <td>okita@gmail.com</td>
+          <td>Female</td>
+          <td>Student</td>
+          <td class="warning">No</td>
+          <td class="primary">Details</td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="#">Show All</a>
+  </div>
+</main>
+{% endblock content %}
+<!-- END OF MAIN -->
