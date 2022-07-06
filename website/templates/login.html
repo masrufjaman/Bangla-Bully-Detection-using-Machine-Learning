@@ -28,7 +28,7 @@
           <input type="password" placeholder="Enter Password" name="psw" required>
           <button type="submit"><b>Submit</b></button>
         <div class="signup_link">
-         No Account? Sign Up <a href="Sign_Up.html">Here</a>
+         No Account? Sign Up <a href="{{url_for('views.SignUp')}}">Here</a>
        <br><a href="{{url_for('views.reset_pass')}}">Reset Password?</a>
         </div>
       </form>

@@ -5,7 +5,7 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    return "<h1>Welcome to homepage.</h>"
+    return render_template("homepage.html")
 
 @views.route('/login')
 def login():
@@ -18,9 +18,3 @@ def reset_pass():
 @views.route('/SignUp')
 def SignUp():
     return render_template("SignUp.html")
-
-@views.route('/homepage')
-def homepage():
-    return render_template("homepage.html")
-
-
