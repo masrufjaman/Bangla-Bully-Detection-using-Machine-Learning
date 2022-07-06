@@ -14,3 +14,7 @@ def customers_info():
 @admin.route('/messages')
 def customer_messages():
     return render_template("customer_messages.html")
+
+@admin.route('/settings')
+def settings():
+    return render_template("admin_settings.html")
