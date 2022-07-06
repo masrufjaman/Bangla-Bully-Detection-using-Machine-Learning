@@ -9,18 +9,20 @@ body {
     width: 1200px;
     height: 300px;
     margin: 240px auto;
+   
 }
 
 .container .box {
     position: relative;
     width: calc(400px - 30px);
     height: calc(300px - 30px);
-    background: #8cb6db;
+    background: rgba(87, 138, 213, 0.948);
     float: left;
     margin: 15px;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
+    text-align: center;
 }
 
 .container .box .icon {
@@ -29,7 +31,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f00;
+    background: rgb(85, 168, 217);
     transition: 0.5s;
     z-index: 1;
 }
@@ -65,21 +67,33 @@ body {
     padding: 20px;
     box-sizing: border-box;
     transition: 0.5s;
+    text-align: center;
 
 }
-
+.container .box:hover .content
+{
+ top:100px;
+}
 .container .box .content h3 {
 margin: 0 0 10px;
 padding: 0;
 color :beige;
-font-size: 24px;
+font-size: 30px;
 
 
 }
 .container .box .content h3 {
     margin: 0;
     padding: 0;
-    color :beige;
-
+    color :black;
+    text-align: center;
     
     }
+
+    .container .box .content p {
+        margin: 0;
+        padding: 0;
+        color: black;
+        text-align: center;
+    }
+    

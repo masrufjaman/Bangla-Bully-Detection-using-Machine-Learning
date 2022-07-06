@@ -12,4 +12,5 @@ def home():
 def help():
     # return "<h1>Welcome to help page.</h>"
     return render_template("help.html")
+
     #<--- after you create an html page for help webpage 
