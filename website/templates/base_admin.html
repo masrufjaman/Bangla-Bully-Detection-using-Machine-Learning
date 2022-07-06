@@ -33,20 +33,20 @@
 
         <!-- sidebar -->
         <div class="sidebar">
-          <a href="{{url_for('admin.admin_dashboard')}}">
+          <a {% if request.path == '/admin/' %} class="active" {% endif %} href="{{url_for('admin.admin_dashboard')}}">
             <span class="material-icons-sharp">grid_view</span>
             <h3>Dashboard</h3>
           </a>
-          <a href="{{url_for('admin.customers_info')}}" class="active">
+          <a {% if request.path == '/admin/customers-info' %} class="active" {% endif %} href="{{url_for('admin.customers_info')}}">
             <span class="material-icons-sharp">person_outline</span>
             <h3>Customers</h3>
           </a>
-          <a href="{{url_for('admin.customer_messages')}}">
+          <a {% if request.path == '/admin/messages' %} class="active" {% endif %} href="{{url_for('admin.customer_messages')}}">
             <span class="material-icons-sharp">question_answer</span>
             <h3>Message</h3>
             <span class="message-count">26</span>
           </a>
-          <a href="{{url_for('admin.settings')}}">
+          <a {% if request.path == '/admin/settings' %} class="active" {% endif %} href="{{url_for('admin.settings')}}">
             <span class="material-icons-sharp">settings</span>
             <h3>Settings</h3>
           </a>
