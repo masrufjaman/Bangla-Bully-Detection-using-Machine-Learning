@@ -12,5 +12,14 @@ def home():
 def help():
     # return "<h1>Welcome to help page.</h>"
     return render_template("help.html")
-
-    #<--- after you create an html page for help webpage 
+    
+@views.route('/message')
+def message():
+   return render_template("message.html")
+@views.route('/upload')
+def upload():
+    return render_template("upload.html")
+@views.route('/guidence')
+def guidence():
+    return render_template("guidence.html")
+  
