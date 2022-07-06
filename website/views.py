@@ -19,3 +19,8 @@ def reset_pass():
 def SignUp():
     return render_template("SignUp.html")
 
+@views.route('/homepage')
+def homepage():
+    return render_template("homepage.html")
+
+
