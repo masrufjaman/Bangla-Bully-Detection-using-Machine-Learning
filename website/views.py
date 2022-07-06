@@ -24,3 +24,8 @@ def help():
     # return "<h1>Welcome to help page.</h>"
     return render_template("help.html")
     #<--- after you create an html page for help webpage
+
+@views.route('/profile')
+def profile():
+    # return "<h1>Welcome to profile page.</h>"
+    return render_template("profile.html")
