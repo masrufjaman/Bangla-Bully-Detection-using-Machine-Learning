@@ -10,3 +10,7 @@ def admin_dashboard():
 @admin.route('/customers-info')
 def customers_info():
     return render_template("customers_info.html")
+
+@admin.route('/messages')
+def customer_messages():
+    return render_template("customer_messages.html")
