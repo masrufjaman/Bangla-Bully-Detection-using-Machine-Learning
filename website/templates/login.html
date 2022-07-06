@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <!-- stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/login.css') }}"
+    />
+    <!-- materials icon -->
+    <!-- https://fonts.google.com/icons?icon.style=Sharp&icon.query=close -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form>
+      <div class="center">
+        <h1>Log In to your Account</h1>
+    <div class="container">
+    <label for="uname">Email Address</label>
+          <input type="text" placeholder="Enter Email" name="uname" required>
+          <label for="psw">Password</label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit"><b>Submit</b></button>
+        <div class="signup_link">
+         No Account? Sign Up <a href="Sign_Up.html">Here</a>
+       <br><a href="{{url_for('views.reset_pass')}}">Reset Password?</a>
+        </div>
+      </form>
+    </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,72 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#84B7FE;
+    height: 100vh;
+    overflow:hidden;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    transform: translate(-50%, -50%);
+    width:400px;
+}
+.center h1
+{
+    text-align: center;
+    padding: 10px;
+    color:black;
+    margin: 10px;
+    font-size: 20px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #84B7FE;
+    border: 1px solid;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: whitesmoke;
+    color: black;
+    padding:10px 10px;
+    height: 40px;
+    margin: 10px 255px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .container {
+    padding: 16px;
+    font-size: medium;
+  }
+
+  .signup_link
+{
+    margin:10px 0px;
+    text-align: center;
+    font-size:16px;
+    color:black;
+}
+.signup_link a
+{
+    color:blue;
+    text-decoration: none;
+}
+.signup_link a:hover
+{
+    text-decoration: underline;
+}
