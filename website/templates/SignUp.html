@@ -18,68 +18,25 @@
     />
   </head>
   <body>
+    <form>
+      <div class="center">
+        <h1>Sign up to your snooper account</h1>
     <div class="container">
-      <div class="title">Sign up for your Snooper Account </div>
-      <div class="content">
-        <form action="" method="post">
-          <div class="user-details">
-            <div class="input-box">
-              <span class="details">First Name</span>
-              <input type="text" name="name" placeholder="Enter your first name" required>
-            </div>
-            <div class="input-box">
-              <span class="details">Last Name</span>
-              <input type="text" name="name"  placeholder="Enter your last name" required>
-            </div>
-            <div class="input-box">
-              <span class="details">Email</span>
-              <input type="email" name="email" placeholder="Enter your email" required >
-            </div>
-            <div class="input-box">
-                <span class="details">Password</span>
-                <input type="password" name="password" placeholder="Enter your password" maxlength="10" required >
-              </div>
-            <div class="input-box">
-              <span class="details">Age</span>
-              <input type="number" name="Age" placeholder="Enter your age" maxlength="2" required>
-            </div>
-            <div class="input-box">
-              <span class="details">Occupation</span>
-              <input type="text" name="occupation" placeholder="Student/Employee" required>
-            </div>
-            <div class="input-box">
-              <span class="details">Date of Birth</span>
-              <input type="date" name="dateofBirth">
-            </div>
-          </div>
-          <div class="gender-details">
-            <input type="radio" name="gender" id="dot-1" value="Male">
-            <input type="radio" name="gender" id="dot-2" value="Female">
-            <input type="radio" name="gender" id="dot-3" value="Not Prefered">
-            <span class="gender-title">Gender</span>
-            <div class="category">
-              <label for="dot-1">
-              <span class="dot one"></span>
-              <span class="gender">Male</span>
-            </label>
-            <label for="dot-2">
-              <span class="dot two"></span>
-              <span class="gender">Female</span>
-            </label>
-            <label for="dot-3">
-              <span class="dot three"></span>
-              <span class="gender">Prefer not to say</span>
-              </label>
-            </div>
-          </div>
-          <div class="button">
-            <input type="submit" value="Sign Up">
-          </div>
-          <div class="signin">
-         <span>Already have an account? <a href="login.html">Sign In</a> </span>
-         </div>
-        </form>
-      </div>
+      <label for="name">First Name</label>
+          <input type="text" placeholder="Enter First Name" name="name" required>
+          <label for="name">Last Name</label>
+          <input type="text" placeholder="Enter Last Name" name="name" required>
+    <label for="uname">Email Address</label>
+          <input type="text" placeholder="Enter Email" name="uname" required>
+          <label for="psw">Password</label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit"><b>Submit</b></button>
+        <div class="signup_link">
+         No Account? Sign Up <a href="Sign_Up.html">Here</a>
+       <br><br><a href="Reset_Password.html">Reset Password?</a>
+        </div>
+      </form>
+    </div>
+    </body>
+    </html>
     
-  </body>
-  </html>
