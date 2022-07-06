@@ -12,7 +12,7 @@ def login():
     return render_template("login.html")
 
 @views.route('/ResetPass')
-def ResetPass():
+def reset_pass():
     return render_template("ResetPass.html")
 
 @views.route('/SignUp')
