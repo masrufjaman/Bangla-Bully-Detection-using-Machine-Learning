@@ -24,15 +24,15 @@
                     <div class="Profile tabshow">
                        <button> <a href="Update Pic" style="text-decoration: none; color: black; background-color: white;" >Update Picture</a></button>
 
-                    <br>31
-                    <br>
+                  
+        
 
                     <button> <a href="Delete Pic" style="text-decoration: none; color: black;  background-color: red;">Delete Picture</a></button>
                    
                     <h5>First Name</h5>
                     <input type="text" class="input-field" name = "First name" required>               
-                    <h5>Last Name</h5>
-                    <input type="text" class="input-field" name="Last name" required>
+                     <h5>Last Name </h5> 
+                    <input type="text" class="input-field" name="Last name" required> </h5>
                     <h5>Username</h5>
                     <input type="text" class="input-field" name="Username" required>
                     <h5>Email</h5>
@@ -43,27 +43,43 @@
                     <input type="Occupation" class="input-field" name="occupation" required>
                     <h5>Birthday</h5>
                     <input type="date" class="input-field" name="date" required>
-                    <h5>Gender</h5>
-                    <input type="gender" class="input-field" name="male" placeholder="male" required>                                          <input type="gender" class="input-field" name="female" placeholder="female" required> 
-            
+                  
+                    <br><br>
+                    <label>Gender :</label>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio"name="gender"
+                    id="male">
+                    &nbsp;
+                    <span id="male">Male</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio"name="gender"
+                    id="female">
+                    &nbsp;
+                    <span id="fmale">Female</span>
                     
+
                   </div>
 
         </div>
 
 
-              <br>
-             
-             
-            
-              <div class="text-center">
-              <button> <a href="Update Profile" style="text-decoration: none; color: black; background-color: green;">Update Info</a></button>
-          
-              </div>
+        <br>
+        <div class="text-center">
+        <button onclick="document.getElementById('id01').style.display='block'"style="text-decoration: none; color: black; background-color: green;">Update Info</button>
+       
+        <div id="id01" class="modal">
+
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+        </div>
 
         </div>
         
     </form>
+    
    
 </body>
 </html>
