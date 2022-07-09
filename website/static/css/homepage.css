@@ -31,7 +31,3 @@ textarea{
     box-sizing: content-box;  
   }
 
- textarea.placeholder{
-    text-align: center;
-    padding: 50px 0px;
-}
