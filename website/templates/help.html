@@ -7,32 +7,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help</title>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/help.css') }}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/help.css')}}" 
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
+  <style>
+    h1 {text-align: center;
+      text-decoration: underline;
+       font-style: oblique;
+      color:rgb(21, 133, 171);
+    }
+    </style>
+    <h1>HELP</h1>
   <div class="container">
     <div class="box">
       <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
 
       <div class="content">
-        <h3>upload</h3>
-        <p> how to upload</p>
+        <h3><a href="{{url_for('views.upload')}}">How to upload text and documents</a></h3>
+        <p>Here You can see a  </p>
       </div>
     </div>
     <div class="box">
-      <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
+      <div class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
       <div class="content">
-        <h3>upload</h3>
-        <p> how to upload</p>
+        <h3><a href="{{url_for('views.upload')}}" >Detection Guidence</a></h3>
+        <p>Here You can see a vedio of our model detecting abusive words </p>
       </div>
     </div>
     <div class="box">
-  <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
+      <div class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i>></div>
       <div class="content">
-        <h3>upload</h3>
-        <p> how to upload</p>
+        <h3><a href="{{url_for('views.message')}}">Queries</a></h3>
+        <p>For any kinds of Queries or Feedbacks</p>
       </div>
 
     </div>
