@@ -4,58 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="profile.css">
 </head>
 <body>
-      
+      <form action="user_profile" method="post">
+       
+        <div class="container">
+            <h2>My Profile </h2>
+       
+            
+                  <div class="text-center">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                   
+                    
+                  </div>
+
+                  <div class="rightbox">
+                    <div class="Profile tabshow">
+                       <button> <a href="Update Pic" style="text-decoration: none; color: black; background-color: white;" >Update Picture</a></button>
+
+                  
+        
+
+                    <button> <a href="Delete Pic" style="text-decoration: none; color: black;  background-color: red;">Delete Picture</a></button>
+                   
+                    <h5>First Name</h5>
+                    <input type="text" class="input-field" name = "First name" required>               
+                     <h5>Last Name </h5> 
+                    <input type="text" class="input-field" name="Last name" required> </h5>
+                    <h5>Username</h5>
+                    <input type="text" class="input-field" name="Username" required>
+                    <h5>Email</h5>
+                    <input type="Email" class="input-field" name="email" required>
+                    <h5>Password</h5>
+                    <input type="Password" class="input-field" name="password" required>
+                    <h5>Occupation</h5>
+                    <input type="Occupation" class="input-field" name="occupation" required>
+                    <h5>Birthday</h5>
+                    <input type="date" class="input-field" name="date" required>
+                  
+                    <br><br>
+                    <label>Gender :</label>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio"name="gender"
+                    id="male">
+                    &nbsp;
+                    <span id="male">Male</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio"name="gender"
+                    id="female">
+                    &nbsp;
+                    <span id="fmale">Female</span>
+                    
+
+                  </div>
+
+        </div>
+
+
+        <br>
+        <div class="text-center">
+        <button onclick="document.getElementById('id01').style.display='block'"style="text-decoration: none; color: black; background-color: green;">Update Info</button>
+       
+        <div id="id01" class="modal">
+
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+        </div>
+
+        </div>
+        
+    </form>
     
    
-
-        <h4 class="text-right">My Profile </h4>
-        
-        
-        
-              <div class="text-center">
-                <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-               
-                
-              </div></hr><br>
-        </div>
-         <!-- Save changes button-->
-                                <button class="btn btn-primary" type="button">Upload picture</button>
-                            </form>
-                        </div>
-        </div>
-         <!-- Save changes button-->
-                                <button class="btn btn-primary" type="button">Delete picture </button>
-                            </form>
-                        </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-6"><label class="labels">Frist name</label><input type="text" class="form-control"  value=""></div>
-                            <div class="col-md-6"><label class="labels">Last name</label><input type="text" class="form-control" value=""</div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control"  value=""></div>
-                            <div class="col-md-12"><label class="labels">Password </label><input type="text" class="form-control"  value=""></div>
-                            <div class="col-md-12"><label class="labels">Occupation </label><input type="text" class="form-control"  value=""></div>
-                            
-                        </div>
-        <span>Birthday</span><br>
-                <input type="date" name="date" required> <br>
-        
-        
-        
-        </div>
-         <!-- Save changes button-->
-                                <button class="btn btn-primary" type="button">Update Info</button>
-                            </form>
-                        </div>
-                    
-         
-            </body>
-        </html>
-          
 </body>
 </html>
