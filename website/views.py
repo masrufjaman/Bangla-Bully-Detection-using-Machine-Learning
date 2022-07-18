@@ -1,16 +1,15 @@
 # from crypt import methods
 # from crypt import methods
-from flask import Flask, Blueprint, render_template, request
+from flask import Flask, Blueprint, render_template, request,render_template,url_for,redirect,session
 from werkzeug.routing import Rule
 
 views = Blueprint("views", __name__)
 
 
-@views.route('/', method=['post','get'])
+@views.route("/")
 def home():
-    return render_template("homepage.html")
-    
-
+ return render_template("homepage.html")
+   
 @views.route("/login")
 def login():
     return render_template("login.html")

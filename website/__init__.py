@@ -1,5 +1,5 @@
 import os
-from flask import Flask,render_template,request,url_for,redirect,session
+from flask import Flask
 
 
 def create_app():
@@ -8,7 +8,7 @@ def create_app():
     ALLOWED_EXTS = {"txt", "pdf", "doc"}
     def check_file(file):
         return '.' in file and file.rsplit('.',1)[1].lower() in ALLOWED_EXTS
-    
+        
     from .admin import admin
     from .views import views
 
