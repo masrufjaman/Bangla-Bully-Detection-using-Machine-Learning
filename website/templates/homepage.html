@@ -27,20 +27,13 @@
         <textarea
           placeholder="Write or paste your text here.You can also upload a doc/pdf file here.Our snooper will detect the offensive words from your content"></textarea>
         <div class="upload-btn-wrapper">
-          {% if error %}
-          <p style="color:#ff0000">{(error)}</p>
-          {% endif %}
-
-          {% if filename %}
-          <p>Your File: {(filename)} has been uploader</p>
-
-          {% else %}
-          <form action="/" method="post">
-            <input type="file" name="myfile"><br>
+          
+      <form action="/" method="post" enctype=multipart/form-data>
+            <input type="file" name="file"><br>
             <input type="submit" name="upload" value="upload">
-          </form>
+       </form>
         </div>
-        {% endif %}
+        
         <button type="submit"><b>Detect</b></button>
       </div>
     </div>

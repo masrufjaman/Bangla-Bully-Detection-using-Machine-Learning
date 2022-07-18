@@ -1,0 +1,32 @@
+@app.route('/', method=['post','get'])
+error = None
+filename = None
+
+
+if request.method == 'POST':
+if 'file' not in request.files:
+error="File not selected"
+return render_template('homepage.html', error=error, username="uname" )
+
+file = request.files['files']
+filename = file.filename
+
+if filename == '':
+error = 'Filename is empty"
+return render_template('homepage.html', error=error, username="uname" )
+
+if check_file(filename) == False:
+ errpr = "This file is not allowed"
+ return render_template('homepage.html', error=error, username="uname" )
+
+file.save(os.path.join("/var/www/html/web/uploads",filename))
+
+return render_template("homepage.html", filename="filename")
+
+
+
+ALLOWED_EXTS = {"txt", "pdf", "doc"}
+    def check_file(file):
+        return '.' in file and file.rsplit('.',1)[1].lower() in ALLOWED_EXTSs
+
+
