@@ -1,10 +1,12 @@
-from crypt import methods
-from flask import Blueprint, render_template
+# from crypt import methods
+# from crypt import methods
+from flask import Flask, Blueprint, render_template, request
+from werkzeug.routing import Rule
 
 views = Blueprint("views", __name__)
 
 
-@views.route("/")
+@views.route('/', method=['post','get'])
 def home():
     return render_template("homepage.html")
     
