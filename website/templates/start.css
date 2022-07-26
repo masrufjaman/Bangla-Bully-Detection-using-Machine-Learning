@@ -2,19 +2,45 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
 }
+
 body {
     font-family: 'montserrat';
 }
+
 nav {
-    height: 80%;
+    height: 80px;
     width: 100%;
-    background: blue;
+    background: #34495e;
 }
-label .logo {
+
+label.logo {
     font-size: 35px;
     font-size: bold;
-    color: white;
+    color:white;
     padding: 0 100px;
     line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 80px;
+}
+nav li{
+    display: inline-block;
+margin: 0 8px;
+line-height: 80px;
+
+}
+nav a{
+color: white;
+font-size: 18px;
+text-transform: uppercase;
+border: 1px solid transparent;
+padding: 7px 10px;
+border-radius: 3px;
+}
+a.active,a:hover{
+   border: 1px solid white;
+   transition: .5s;
 }
