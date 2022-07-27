@@ -5,42 +5,74 @@
     list-style: none;
 }
 
-body {
-    font-family: 'montserrat';
+.dropdown {
+    margin: 0 auto;
+
 }
 
 nav {
-    height: 80px;
-    width: 100%;
-    background: #34495e;
+    height: 60px;
+    background: rgb(109, 131, 196);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    padding: 5px 0 0 80px;
+    width: 150px;
+    height: auto;
+    top: 10px;
 }
 
 label.logo {
-    font-size: 35px;
-    font-size: bold;
-    color:white;
+    font-size: 50px;
+    color: white;
     padding: 0 100px;
-    line-height: 80px;
+    line-height: 20px;
+    font-family: 'Brush Script MT', cursive;
+    top: 2px;
 }
-nav ul{
-    float: right;
-    margin-right: 80px;
-}
-nav li{
-    display: inline-block;
-margin: 0 8px;
-line-height: 80px;
 
+nav ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 90px;
+    font-size:36px
 }
-nav a{
-color: white;
-font-size: 18px;
-text-transform: uppercase;
-border: 1px solid transparent;
-padding: 7px 10px;
-border-radius: 3px;
+
+nav ul li {
+    background: rgb(231, 226, 226);
+    position: relative;
+    list-style: none;
+    display: inline-block;
 }
-a.active,a:hover{
-   border: 1px solid white;
-   transition: .5s;
+
+nav ul li a {
+    display: block;
+    padding: 0 15px;
+    background: rgb(86, 116, 205);
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    background: whitesmoke;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 60px;
+    display: none;
+}
+
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
 }
