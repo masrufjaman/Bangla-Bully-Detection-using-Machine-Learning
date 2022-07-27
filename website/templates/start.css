@@ -24,10 +24,11 @@ nav {
 }
 
 label.logo {
-    font-size: 50px;
+   
+    font-size: 70px;
     color: white;
-    padding: 0 100px;
-    line-height: 20px;
+    padding: 0 50px;
+    line-height: 50px;
     font-family: 'Brush Script MT', cursive;
     top: 2px;
 }
@@ -36,8 +37,8 @@ nav ul {
     padding: 0;
     margin: 0;
     float: right;
-    margin-right: 90px;
-    font-size:36px
+    margin-right: 130px;
+    
 }
 
 nav ul li {
@@ -49,8 +50,8 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 0 15px;
-    background: rgb(86, 116, 205);
+    padding: 0 10px;
+    background:  rgb(109, 131, 196);
     text-decoration: none;
     line-height: 60px;
     font-size: 20px;
