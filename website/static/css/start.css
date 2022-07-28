@@ -58,13 +58,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: whitesmoke;
+    background: rgb(147, 193, 223);
 }
 
 nav ul ul {
     position: absolute;
     top: 60px;
     display: none;
+   
 }
 
 nav ul li:hover>ul {

@@ -46,3 +46,9 @@ def upload():
 @views.route("/guidence")
 def guidence():
     return render_template("guidence.html")
+@views.route("/start")
+def start():
+    return render_template("start.html")
+@views.route("/footer")
+def footer():
+    return render_template("footer.html")
