@@ -7,51 +7,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help</title>
 
-  <link rel="stylesheet" href="{{url_for('static', filename='css/help.css')}}" >
+  <link rel="stylesheet" href="{{url_for('static', filename='css/help.css')}}">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}" >
+  <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="dropdown">
-  <nav>
+    <nav>
       <label class="logo">SNOOPER</label>
-    
-      <ul> 
-         
-          <li><a href="#"><i class="fa fa-bars"></i></a>
-         <ul>
-          <li><a class="active" href="#">AccountDetails</a></li>
-         <li><a href="#">Log out</a></li>  
-        </ul>
-    </li> 
-</ul> 
-  </nav>
-</div>
+
+      <ul>
+
+        <li><a href="#"><i class="fa fa-bars"></i></a>
+          <ul>
+            <li><a class="active" href="#">AccountDetails</a></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </body>
 <body>
-  <style>
-    h1 {text-align: center;
-      text-decoration:dashed ;
-       font-style:normal ;
-       margin: 5%;
-      color:rgb(21, 133, 171);
-    }
-    </style>
-    <h1>HELP</h1>
+  <h1>HELP</h1>
   <div class="container">
     <div class="box">
       <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
 
       <div class="content">
         <h3><a href="{{url_for('views.upload')}}">How to upload text and documents</a></h3>
-        <p>Here You can see a  </p>
+        <p>Here You can see a </p>
       </div>
     </div>
     <div class="box">
       <div class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
       <div class="content">
-        <h3><a href="{{url_for('views.upload')}}" >Detection Guidence</a></h3>
+        <h3><a href="{{url_for('views.guidence')}}">Detection Guidence</a></h3>
         <p>Here You can see a vedio of our model detecting abusive words </p>
       </div>
     </div>
