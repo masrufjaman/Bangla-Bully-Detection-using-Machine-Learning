@@ -12,7 +12,7 @@
 
 nav {
     height: 60px;
-    background: rgb(109, 131, 196);
+    background: #243C6D;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,7 +51,7 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 0 10px;
-    background:  rgb(109, 131, 196);
+    background:  #243C6D;
     text-decoration: none;
     line-height: 60px;
     font-size: 20px;
