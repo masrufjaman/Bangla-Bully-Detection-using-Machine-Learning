@@ -2,7 +2,7 @@
  *{
     margin: 0;
     padding: 0;
-    box-sizing:content-box;
+    box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
     
   }
@@ -16,13 +16,20 @@
   
   }
   .container{
-    width: 750px;  
-    position: center;
+   
     background: #84B7FE;
-    padding: 50px 50px;
+    padding: 50px 60px;
+     position: relative;
+    max-width: 500px;
+    width: 300%;
+   
+   
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
   
 
-  }
+
   .container h2{
     position: center;
     font-size: 22px;
@@ -85,3 +92,96 @@
   .input-button input:hover{
     background: #0e4bf1;
   }
+  *{
+     margin: 0;
+     padding: 0;
+     box-sizing:border-box;
+     font-family: 'Poppins', sans-serif;
+     
+   }
+ 
+   body{
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: white;
+   
+   }
+   .container{
+    
+     background: #84B7FE;
+     padding: 50px 60px;
+      position: relative;
+     max-width: 500px;
+     width: 300%;
+    
+    
+     border-radius: 5px;
+     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+   }
+   
+ 
+ 
+   .container h2{
+     position: center;
+     font-size: 22px;
+     font-weight: 600;
+     color: 000000;
+   }
+   .container h2::before{
+     content: '';
+     position: center;
+     left: 0;
+     bottom: 0;
+     height: 0 px;
+     width: 15px;
+     border-radius: 12px;
+     background: #4070f4;
+   }
+  
+   .rightbox form{
+     margin-top: 5 px;
+   }
+   .container form .Profile-tabshow{
+     height: 22px;
+     margin: 10px 0;
+   }
+   form .input-box input{
+     height: 70%;
+     width: 100%;
+     outline:black;
+     padding: 8px 15px;
+     font-size: 17px;
+     font-weight: 400;
+     color: #333;
+     border: 1.5px solid #333;
+     border-bottom-width: 2.5px;
+     border-radius: 6px;
+     transition: all 0.3s ease;
+   }
+  
+   form .policy{
+     display: flex;
+     align-items: center;
+   }
+   form h3{
+     color: #707070;
+     font-size: 14px;
+     font-weight: 500;
+     margin-left: 10px;
+   }
+   .input-button input{
+     position: center;
+     height: 70%;
+     width: 50%;
+     nav-right: auto;
+     color: black;
+     letter-spacing: 1px;
+     border: none;
+     background: green;
+     cursor: pointer;
+   }
+   .input-button input:hover{
+     background: #0e4bf1;
+   }
