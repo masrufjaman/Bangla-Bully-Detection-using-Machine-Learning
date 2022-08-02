@@ -16,7 +16,26 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
+  <body>
+    <div class="dropdown">
+        <nav>
+            <label class="logo">SNOOPER</label>
+
+            <ul>
+
+                <li><a href="#"><i class="fa fa-bars"></i></a>
+                    <ul>
+                        <li><a class="active" href="#">AccountDetails</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
   <body>
     <form>
       <div class="center">

@@ -6,15 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detection Guidence</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/guidence.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
 </head>
+<body>
+    <div class="dropdown">
+        <nav>
+            <label class="logo">SNOOPER</label>
 
-<body bgcolor="#84B7FE">
+            <ul>
+
+                <li><a href="#"><i class="fa fa-bars"></i></a>
+                    <ul>
+                        <li><a class="active" href="#">AccountDetails</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+<body  style bgcolor="#84B7FE"; media="screen">
 
     <font face="bookman old style">
-        <h1 style="text-align: center;"> <b><u> Detection Guidence</u></b></h1>
+        <h1 style="text-align: center; margin: 20px;"> <b><u> Detection Guidence</u></b></h1>
     </font>
 
-    <p style="text-align:center;"> <b>The color RED on the words help you see which words were detected as offensive
+    <p style="text-align:center;"> <b>The color Red on the words help you see which words were detected as offensive
             words. </b></p>
     <p style="text-align:center;"> <b>You can see the detected words here and also can see the accuracy. </b></p>
     <p style="text-align:center;"> <b>After pressing the detect button Here on the down right you can see text accuracy
@@ -29,5 +52,38 @@
     </video>
 
 </body>
+<body>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4><b>About us</b></h4>
+                    <p>Our software ains to make </p>
+                    <p>your bangali write upsa great one</p>
+                    <p>by helping you to remove the </p>
+                    <p> offensive words we detect</p>
+                </div>
+                <div class="footer-col">
+                    <h4><b>Quick Links</b></h4>
+                    <div class="helpfont">
+                        <li>
+                            <a href="#">Help</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4><b>Contact us</b></h4>
+                    <div class="social-links">
+                        <li><a href="#">Gmail<i class="glyphicon"> &#x2709;</i></a></li>
+                        <li><a href="#">Phone<i class='fas'>&#xf095;</a> </li>
+                        <li><a href="#">Message<i class='fas'>&#xf4ad;</a> </li>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+
+    </footer>
+
+</body>
 </html>
