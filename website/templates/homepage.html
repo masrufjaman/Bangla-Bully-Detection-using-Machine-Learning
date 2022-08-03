@@ -44,20 +44,22 @@
         <textarea
           placeholder="Write or paste your text here.You can also upload a doc/pdf file here.Our snooper will detect the offensive words from your content"></textarea>
         <div class="upload-btn-wrapper">
-          <input type="file" name="myfile" />
-        </div>
-        <button type="submit"><b>Detect</b></button>
+          
+      <form action="/" method="post" enctype=multipart/form-data>
 
+            <p>  </p>
+            <input type="file" name="file"><br>
+            <input type="submit" name="upload" value="upload">
+            
+       </form>
+        </div>
+        
+        <button type="submit"><b>Detect</b></button>
       </div>
     </div>
     <div class="col no-gutters">
-
       <div class="rightside">
-        <textarea></textarea>
-      </div>
-
-    </div>
-
-
+        <p></p>
+      </div></div>
   </div>
 </body>
