@@ -52,3 +52,6 @@ def start():
 @views.route("/footer")
 def footer():
     return render_template("footer.html")
+@views.route("/userprofile")
+def userprofile():
+    return render_template("userprofile.html")
