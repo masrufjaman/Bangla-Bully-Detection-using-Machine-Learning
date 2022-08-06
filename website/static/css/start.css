@@ -21,14 +21,21 @@ nav {
     width: 150px;
     height: auto;
     top: 10px;
-}
-
-label.logo {
-   
+    color: white;
     font-size: 70px;
     color: white;
     padding: 0 50px;
     line-height: 50px;
+    font-family: 'Brush Script MT', cursive;
+    top: 2px;
+}
+
+label.logo a {
+
+    font-size: 70px;
+    color: white;
+    /* padding: 0 50px;
+    line-height: 50px; */
     font-family: 'Brush Script MT', cursive;
     top: 2px;
 }
@@ -38,7 +45,7 @@ nav ul {
     margin: 0;
     float: right;
     margin-right: 130px;
-    
+
 }
 
 nav ul li {
@@ -47,18 +54,20 @@ nav ul li {
     list-style: none;
     display: inline-block;
 }
-nav ul li a{
+
+nav ul li a {
     color: #243C6D;
     font-size: 4px;
 }
+
 nav ul li a {
     display: block;
     padding: 0 10px;
-    background:  #243C6D;
+    background: #243C6D;
     text-decoration: none;
     line-height: 60px;
     font-size: 17px;
-    color:rgb(249, 247, 247);
+    color: rgb(249, 247, 247);
 }
 
 nav ul li a:hover {
@@ -69,7 +78,7 @@ nav ul ul {
     position: absolute;
     top: 60px;
     display: none;
-   
+
 }
 
 nav ul li:hover>ul {
