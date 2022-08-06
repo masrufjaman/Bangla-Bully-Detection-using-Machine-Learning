@@ -13,23 +13,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <body>
-        <div class="dropdown">
-            <nav>
-                <label class="logo">SNOOPER</label>
-
-                <ul>
-
-                    <li><a href="#"><i class="fa fa-bars"></i></a>
-                        <ul>
-                            <li><a class="active" href="#">AccountDetails</a></li>
-                            <li><a href="#">Log out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </body>
+    <div class="dropdown">
+        <nav>
+            <label class="logo">SNOOPER</label>
+  
+            <ul>
+  
+                <li><a href="#"><i class="fa fa-bars"></i></a>
+                    <ul>
+                        <li><a class="active" href="{{url_for('views.userprofile')}}">User Profile</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+  </body>
+<body>
+    
     <div class="container">
         <div class="title">User Profile</div>
         <div class="content">
@@ -41,32 +42,32 @@
             <form action="#">
                 <div class="user-details">
                     <div class="input-box">
-                        <span class="details">Firt Name</span>
-                        <input type="text" placeholder="Enter your First Name" required>
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Last Name</span>
-                        <input type="text" placeholder="Enter your Last Name" required>
+                        <input type="text" placeholder="" required>
                     </div>
                     <div class="input-box">
                         <span class="details">username</span>
-                        <input type="text" placeholder="Enter your username" required>
+                        <input type="text" placeholder="" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your email" required>
+                        <input type="text" placeholder="" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone Number</span>
-                        <input type="text" placeholder="Enter your number" required>
+                        <input type="text" placeholder="" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="text" placeholder="Enter your password" required>
+                        <input type="text" placeholder="" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Occupation</span>
-                        <input type="text" placeholder="Enter Your Occupation" required>
+                        <input type="text" placeholder="" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Date Of Birth</span>
