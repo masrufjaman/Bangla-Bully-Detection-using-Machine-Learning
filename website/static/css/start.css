@@ -29,16 +29,15 @@ nav {
     font-family: 'Brush Script MT', cursive;
     top: 2px;
 }
-
-label.logo a {
+/* label.logo a {
 
     font-size: 70px;
     color: white;
-    /* padding: 0 50px;
-    line-height: 50px; */
+   padding: 0 50px;
+    line-height: 50px; 
     font-family: 'Brush Script MT', cursive;
     top: 2px;
-}
+} */
 
 nav ul {
     padding: 0;
