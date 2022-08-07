@@ -22,13 +22,15 @@ nav {
     height: auto;
     top: 10px;
     color: white;
-    font-size: 70px;
+    font-size: 45px;
     color: white;
     padding: 0 50px;
     line-height: 50px;
     font-family: 'Brush Script MT', cursive;
     top: 2px;
+
 }
+
 /* label.logo a {
 
     font-size: 70px;
