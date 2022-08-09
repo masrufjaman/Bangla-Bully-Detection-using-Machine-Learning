@@ -1,6 +1,8 @@
 import os
+import PyPDF2
 from flask import Flask,flash, Blueprint, render_template, request,url_for,redirect,session
 from werkzeug.utils import secure_filename
+
 
 views = Blueprint("views", __name__)
 
@@ -30,8 +32,16 @@ def home():
        return redirect(request.url)
     if file and allowed_file(file.filename):
        filename = secure_filename(file.filename)
+       a = PyPDF2.PdfFileReader('Application form Amabassador programme.pdf')
+       str = ""
+       for i in range(1,10):
+         str += a.getPage(i).extract_text()
+       with open ("text.txt", "w") as f:
+         f.write(str)
        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
        print("File saved")
+    
+
  return render_template("homepage.html")
     
    
