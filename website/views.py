@@ -1,6 +1,8 @@
 import os
+from xmlrpc.client import boolean
 import PyPDF2
 from flask import Flask,flash, Blueprint, render_template, request,url_for,redirect,session
+from sqlalchemy import true
 from werkzeug.utils import secure_filename
 
 
@@ -45,7 +47,7 @@ def home():
  return render_template("homepage.html")
     
    
-@views.route("/login")
+@views.route("/login", methods=['GET', 'POST'])
 def login():
     return render_template("login.html")
 
@@ -55,8 +57,29 @@ def reset_pass():
     return render_template("ResetPass.html")
 
 
-@views.route("/SignUp")
+@views.route("/SignUp" , methods=['GET', 'POST'])
 def SignUp():
+    if request.method == 'POST':
+        fname = request.form.get ('fname')
+        lname = request.form.get ('lname')
+        email = request.form.get ('email')
+        psw = request.form.get ('psw')
+        occupation = request.form.get ('occupation')
+        dob = request.form.get ('dob')
+
+        if len(fname) < 2:
+            flash('First name must be greater than 1 character.' , category ='error')
+        elif len(lname) < 2:
+            flash('Last name must be greater than 1 character.' , category ='error')
+        elif len(email) < 4:
+            flash('Email must be greater than 4 characters.' , category ='error')
+        elif len(psw) < 7:
+            flash('Password must be atleast 7 characters' , category ='error')
+
+        else:
+            flash('Account created', category= 'success')
+            pass
+
     return render_template("SignUp.html")
 
 
