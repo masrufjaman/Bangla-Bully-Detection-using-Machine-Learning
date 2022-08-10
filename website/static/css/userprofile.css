@@ -58,6 +58,12 @@ form .user-details .input-box {
   /* border: 5px solid transparent; */
 }
 
+img {
+  padding: 5px;
+  width: 120px;
+
+}
+
 form .input-box span.details {
   display: block;
   font-weight: 500;

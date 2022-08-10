@@ -6,10 +6,11 @@ body
     background:#84B7FE;
     height: 100vh;
     overflow:hidden;
+  
 }
 .center{
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 90%;
     right: 40%;
     transform: translate(-50%, -50%);
     width:400px;
