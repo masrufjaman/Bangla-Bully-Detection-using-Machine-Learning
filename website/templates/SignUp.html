@@ -1,4 +1,4 @@
-{% extend '' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,9 +30,11 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+  {% endif %}
   {% endfor %}
   {% endif %}
-  {% endwith %} -->
+  {% endwith %} 
+  
   <form action="SignUp" method="post">
     <div class="center">
       <h1>Sign up to your snooper account</h1>

@@ -74,6 +74,10 @@ def SignUp():
             flash('Email must be greater than 4 characters.' , category ='error')
         elif len(psw) < 7:
             flash('Password must be atleast 7 characters' , category ='error')
+        
+        elif len(occupation) < 6:
+            flash('Password must be atleast 6 characters' , category ='error')
+
 
         else:
             flash('Account created', category= 'success')
