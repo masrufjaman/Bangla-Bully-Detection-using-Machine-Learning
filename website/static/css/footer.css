@@ -3,14 +3,18 @@
 body {
     line-height: 2.0;
     font-family: 'Poppins', sans-serif;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*{
+/* body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-}
+} */
 
 .container {
     max-width: 1150px;
