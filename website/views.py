@@ -1,11 +1,39 @@
-from flask import Blueprint, render_template
+import os
+from flask import Flask,flash, Blueprint, render_template, request,url_for,redirect,session
+from werkzeug.utils import secure_filename
 
 views = Blueprint("views", __name__)
 
+UPLOAD_FOLDER = './website/uploads'
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx'}
 
-@views.route("/")
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@views.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template("homepage.html")
+    
+ if request.method == 'POST':
+        # check if the post request has the file part
+    if 'file' not in request.files:
+       flash('No file part')
+       return redirect(request.url)
+    file = request.files['file']
+        # If the user does not select a file, the browser submits an
+        # empty file without a filename.
+    if file.filename == '':
+       flash('No selected file')
+       return redirect(request.url)
+    if file and allowed_file(file.filename):
+       filename = secure_filename(file.filename)
+       file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+       print("File saved")
+ return render_template("homepage.html")
+    
 
 
 @views.route("/login")
@@ -46,3 +74,9 @@ def upload():
 @views.route("/guidence")
 def guidence():
     return render_template("guidence.html")
+@views.route("/start")
+def start():
+    return render_template("start.html")
+@views.route("/footer")
+def footer():
+    return render_template("footer.html")

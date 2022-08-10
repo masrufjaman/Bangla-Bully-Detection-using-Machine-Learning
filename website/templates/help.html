@@ -7,37 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help</title>
 
-  <link rel="stylesheet" href="{{url_for('static', filename='css/help.css')}}" 
+  <link rel="stylesheet" href="{{url_for('static', filename='css/help.css')}}">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-
 <body>
-  <style>
-    h1 {text-align: center;
-      text-decoration: underline;
-       font-style: oblique;
-      color:rgb(21, 133, 171);
-    }
-    </style>
-    <h1>HELP</h1>
+  <div class="dropdown">
+    <nav>
+      <label class="logo">SNOOPER</label>
+
+      <ul>
+
+        <li><a href="#"><i class="fa fa-bars"></i></a>
+          <ul>
+            <li><a class="active" href="#">AccountDetails</a></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+<body>
+  <h1>HELP</h1>
+  
   <div class="container">
     <div class="box">
       <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
 
       <div class="content">
         <h3><a href="{{url_for('views.upload')}}">How to upload text and documents</a></h3>
-        <p>Here You can see a  </p>
+        <p>Here You can see a </p>
       </div>
     </div>
     <div class="box">
       <div class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
       <div class="content">
-        <h3><a href="{{url_for('views.upload')}}" >Detection Guidence</a></h3>
+        <h3><a href="{{url_for('views.guidence')}}">Detection Guidence</a></h3>
         <p>Here You can see a vedio of our model detecting abusive words </p>
       </div>
     </div>
     <div class="box">
-      <div class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i>></div>
+      <div class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
       <div class="content">
         <h3><a href="{{url_for('views.message')}}">Queries</a></h3>
         <p>For any kinds of Queries or Feedbacks</p>
@@ -46,5 +61,38 @@
     </div>
   </div>
 </body>
+<body>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4><b>About us</b></h4>
+          <p>Our software ains to make </p>
+          <p>your bangali write upsa great one</p>
+          <p>by helping you to remove the </p>
+          <p> offensive words we detect</p>
+        </div>
+        <div class="footer-col">
+          <h4><b>Quick Links</b></h4>
+          <div class="helpfont">
+            <li>
+              <a href="#">Help</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4><b>Contact us</b></h4>
+          <div class="social-links">
+            <li><a href="#">Gmail<i class="glyphicon"> &#x2709;</i></a></li>
+            <li><a href="#">Phone<i class='fas'>&#xf095;</a> </li>
+            <li><a href="#">Message<i class='fas'>&#xf4ad;</a> </li>
+          </div>
+        </div>
+      </div>
 
+    </div>
+
+  </footer>
+
+</body>
 </html>

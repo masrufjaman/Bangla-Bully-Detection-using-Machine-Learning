@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snooper</title>
-    <!-- stylesheet -->
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/homepage.css') }}"
-    />
-    <!--Bootstrap css-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-    <!-- materials icon -->
-    <!-- https://fonts.google.com/icons?icon.style=Sharp&icon.query=close -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    
-    <div class = "row no-gutters">
 
-         <div class="col no-gutters">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snooper</title>
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}" />
+  <!--Bootstrap css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- materials icon -->
+  <!-- https://fonts.google.com/icons?icon.style=Sharp&icon.query=close -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-            <div class="leftside">
-              
-              <textarea placeholder="Write or paste your text here.You can also upload a doc/pdf file here.Our snooper will detect the offensive words from your content"></textarea>
-              <div class="upload-btn-wrapper">
-              <input type="file" name="myfile" />
-              </div>
-              <button type="submit"><b>Detect</b></button>
-              
-            </div> 
-            </div>
-         <div class="col no-gutters">
+<body>
+  <div class="dropdown">
+    <nav>
+      <label class="logo">SNOOPER</label>
 
-          <div class="rightside">
-            <textarea></textarea>
-          </div> 
+      <ul>
 
-         </div>
+        <li><a href="#"><i class="fa fa-bars"></i></a>
+          <ul>
+            <li><a class="active" href="#">AccountDetails</a></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
+  <div class="row no-gutters">
 
+    <div class="col no-gutters">
+
+      <div class="leftside">
+
+        <textarea
+          placeholder="Write or paste your text here.You can also upload a doc/pdf file here.Our snooper will detect the offensive words from your content"></textarea>
+        <div class="upload-btn-wrapper">
+          
+      <form action="/" method="post" enctype=multipart/form-data>
+
+            <p>  </p>
+            <input type="file" name="file"><br>
+            <input type="submit" name="upload" value="upload">
+            
+       </form>
+        </div>
+        
+        <button type="submit"><b>Detect</b></button>
+      </div>
     </div>
-  </body>
+    <div class="col no-gutters">
+      <div class="rightside">
+        <p></p>
+      </div></div>
+  </div>
+</body>
