@@ -16,8 +16,29 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
+    <div class="dropdown">
+        <nav>
+            <label><a class="logo" href="{{url_for('views.homepage')}}">SNOOPER</a></label>
+
+            <ul>
+
+                <li><a href="#"><i class="fa fa-bars"></i></a>
+                    <ul>
+                        <li><a class="active" href="{{url_for('views.userprofile')}}">User Profile</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+  <body>
+
     <form>
       <div class="center">
         <h1>Reset Password</h1>
@@ -36,4 +57,4 @@
     </div>
     </body>
     </html>
-    
+   

@@ -1,53 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Upload text and documents</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/upload.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>footer</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="dropdown">
-        <nav>
-            <label class="logo">SNOOPER</label>
-  
-            <ul>
-  
-                <li><a href="#"><i class="fa fa-bars"></i></a>
-                    <ul>
-                        <li><a class="active" href="{{url_for('views.userprofile')}}">User Profile</a></li>
-                        <li><a href="#">Log out</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-  </body>
-<body bgcolor="#84B7FE">
-
-    <font face="bookman old style">
-        <h1 style="text-align: center;"> <b><u> How to upload text or documents in the detection box</u></b></h1>
-    </font>
-
-    <p style="text-align:center;"> <b>Press “Detect” button for result. Remember that your text should not exceed 250
-            words </b></p>
-    <p style="text-align:center;"> <b>For Uploading documents, You have to upload a file in “Upload docs ” option in the
-            lower</b></p>
-    <p style="text-align:center;"> <b>left side.The doc file should not be more than 20 Kilobytes(KB).</b></p>
-    <center>
-        <video width="500px" controls>
-            <source src="CSE299 - Meeting 01.mp4" type="vedio/mp4">
-    </center>
-    </video>
-
-</body>
 <body>
     <footer class="footer">
         <div class="container">
@@ -63,7 +24,7 @@
                     <h4><b>Quick Links</b></h4>
                     <div class="helpfont">
                         <li>
-                            <a href="#">Help</a>
+                            <a href="{{url_for('views.help')}}">Help</a>
                         </li>
                     </div>
                 </div>

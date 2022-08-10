@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detection Guidence</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/guidence.css')}}">
+    <title>header</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- For footer -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
 </head>
 <body>
     <div class="dropdown">
         <nav>
-            <label class="logo">SNOOPER</label>
-  
+            <label><a class="logo" href="{{url_for('views.homepage')}}">SNOOPER</a></label>
+
             <ul>
-  
+
                 <li><a href="#"><i class="fa fa-bars"></i></a>
                     <ul>
                         <li><a class="active" href="{{url_for('views.userprofile')}}">User Profile</a></li>
@@ -30,29 +28,10 @@
             </ul>
         </nav>
     </div>
-  </body>
-<body  style bgcolor="#84B7FE"; media="screen">
 
-    <font face="bookman old style">
-        <h1 style="text-align: center; margin: 20px;"> <b><u> Detection Guidence</u></b></h1>
-    </font>
+    {% block content %}{% endblock content %}
 
-    <p style="text-align:center;"> <b>The color Red on the words help you see which words were detected as offensive
-            words. </b></p>
-    <p style="text-align:center;"> <b>You can see the detected words here and also can see the accuracy. </b></p>
-    <p style="text-align:center;"> <b>After pressing the detect button Here on the down right you can see text accuracy
-            (%</b></p>
-    <p style="text-align:center;"> <b>and their sub classification such as sexual,religious, is the text a threat or
-            troll with </b></p>
-    <p style="text-align:center;"> <b>percentag.Also in the down left there will be a word count.</b></p>
-    <center>
-        <video width="500px" controls>
-            <source src="CSE299 - Meeting 01.mp4" type="vedio/mp4">
-    </center>
-    </video>
-
-</body>
-<body>
+    <!-- Footer Start -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -71,6 +50,10 @@
                         </li>
                     </div>
                 </div>
+      
+                <body>
+                    
+                
                 <div class="footer-col">
                     <h4><b>Contact us</b></h4>
                     <div class="social-links">
@@ -84,4 +67,6 @@
         </div>
 
     </footer>
+    <!-- Footer End -->
+</body>
 </html>

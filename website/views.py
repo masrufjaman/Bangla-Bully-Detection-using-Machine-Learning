@@ -42,7 +42,6 @@ def home():
          f.write(str)
        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
        print("File saved")
-    
 
  return render_template("homepage.html")
     
@@ -106,3 +105,12 @@ def upload():
 @views.route("/guidence")
 def guidence():
     return render_template("guidence.html")
+@views.route("/start")
+def start():
+    return render_template("start.html")
+@views.route("/footer")
+def footer():
+    return render_template("footer.html")
+@views.route("/userprofile")
+def userprofile():
+    return render_template("userprofile.html")
