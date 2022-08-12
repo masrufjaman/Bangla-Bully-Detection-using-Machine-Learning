@@ -1,16 +1,15 @@
-
+{% extends 'baseHome.html' %} {% block content %}
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up</title>
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/SignUp.css') }}" />
-  <!-- materials icon -->
-  <!-- https://fonts.google.com/icons?icon.style=Sharp&icon.query=close -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title> Sign Up </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/SignUp.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 {% with messages = get_flashed_messages(with_categories = true) %}
@@ -34,26 +33,73 @@
   {% endfor %}
   {% endif %}
   {% endwith %} 
+  <div class="container">
+    <div class="title">Sign Up for your snooper account</div>
+    <div class="content">
+      <form action="/SignUp" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" placeholder="Enter your first name" name ="fname" id="fname" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" placeholder="Enter your last name" name="lname" id="lname" required>
+                </div>
+                
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter your email" name="email" id="email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter your phone number" name="phoneNumber" id="phoneNumber" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter the password" maxlength="12" name="psw" id="psw" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Occupation</span>
+                    <input type="text" placeholder="Student/Employee/Businessman" name="occupation" id="occupation" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date Of Birth</span>
+                    <input type="date" name="dob" id="dob" min="1999-04-01" max="3000-04-30">
+                </div>
+            </div>
+            <div class="gender-details" name="gender" id="gender">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Sign Up">
+             </div>
+             <div class="signup_link">
+              <a href="{{url_for('views.login')}}">Back to log In</a>
+           </div>
+        </form>
+    </div>
+</div>
   
-  <form action="SignUp" method="post">
-    <div class="container">
-      <h1>Sign up to your snooper account</h1>
-      <div class="container">
-        <label for="fname">First Name</label>
-        <input type="text" placeholder="Enter First Name" name="fname" id="fname" required>
-        <label for="lname">Last Name</label>
-        <input type="text" placeholder="Enter Last Name" name="lname" id="lname" required>
-        <label for="email">Email Address</label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
-        <label for="psw">Password</label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-        <label for="occupation">Occupation</label>
-        <input type="text" placeholder="Enter Password" name="occupation" id="occupation" required>
-        <label for="dob">Date of Birth</label>
-        <input type="date" placeholder="Enter your birth date" name="dob" id="dob" required>
-        <button type="submit"><b>Submit</b></button>
-  </form>
-  </div>
 </body>
 
 </html>
+
+{% endblock content %}

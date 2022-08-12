@@ -62,9 +62,11 @@ def SignUp():
         fname = request.form.get ('fname')
         lname = request.form.get ('lname')
         email = request.form.get ('email')
+        phoneNumber = request.form.get ('phoneNumber')
         psw = request.form.get ('psw')
         occupation = request.form.get ('occupation')
         dob = request.form.get ('dob')
+        gender = request.form.get('gender')
 
         if len(fname) < 2:
             flash('First name must be greater than 1 character.' , category ='error')
@@ -72,9 +74,11 @@ def SignUp():
             flash('Last name must be greater than 1 character.' , category ='error')
         elif len(email) < 4:
             flash('Email must be greater than 4 characters.' , category ='error')
+        elif len(phoneNumber) < 11:
+            flash('Phone number must be eleven digits.' , category ='error')
         elif len(psw) < 7:
             flash('Password must be atleast 7 characters' , category ='error')
-        
+
         elif len(occupation) < 6:
             flash('Password must be atleast 6 characters' , category ='error')
 

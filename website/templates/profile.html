@@ -1,90 +1,80 @@
-{% extends 'baseHome.html' %} {% block content %}
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="profile.css">
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/userprofile.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body>
-  <form action="user_profile" method="post">
-
     <div class="container">
-      <h2>My Profile </h2>
+        <div class="title">Sign Up for your snooper account</div>
+        <div class="content">
 
-
-      <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail"
-          alt="avatar">
-
-
-      </div>
-
-      <div class="rightbox">
-        <div class="Profile tabshow">
-          <button> <a href="Update Pic" style="text-decoration: none; color: black;
-                        background-color: white;">Update Picture</a></button>
-
-
-
-
-          <button> <a href="Delete Pic" style="text-decoration: none; color: black; 
-                     background-color: red;">Delete Picture</a></button>
-
-          <h5>First Name</h5>
-          <input type="text" class="input-field" name="fname" id="fname" required>
-          <h5>Last Name </h5>
-          <input type="text" class="input-field" name="lname" id="lname" required> </h5>
-          <h5>Username</h5>
-          <input type="text" class="input-field" name="uname" id ="uname" required>
-          <h5>Email</h5>
-          <input type="Email" class="input-field" name="email" id="email" required>
-          <h5>Password</h5>
-          <input type="Password" class="input-field" name="psw" id="password" required>
-          <h5>Occupation</h5>
-          <input type="Occupation" class="input-field" name="occupation" id="occupation" required>
-          <h5>Birthday</h5>
-          <input type="date" class="input-field" name="dob" id="dob" required>
-
-          <br><br>
-          <label>Gender :</label>
-          <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" name="gender" id="male">
-          &nbsp;
-          <span id="male">Male</span>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" name="gender" id="female">
-          &nbsp;
-          <span id="female">Female</span>
-
-
+            
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">username</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Occupation</span>
+                        <input type="text" placeholder="" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Date Of Birth</span>
+                        <input type="date" name="party" min="1999-04-01" max="3000-04-30">
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Update Info">
+                 </div>
+            </form>
         </div>
-
-      </div>
-
-
-      <br>
-      <div class="text-center">
-        <button onclick="document.getElementById('id01').style.display='block'"
-          style="text-decoration: none; color: black; background-color: green;">Update Info</button>
-
-        <div id="id01" class="modal">
-
-          <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                title="Close Modal">&times;</span>
-
-            </div>
-
-        </div>
-
-  </form>
-
-
+    </div>
 </body>
 </html>
-{% endblock content %}
