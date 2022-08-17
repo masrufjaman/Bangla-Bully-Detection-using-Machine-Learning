@@ -2,19 +2,20 @@ h1 {
     text-align: center;
     text-decoration: solid;
     font-style: normal;
-    margin: 0%;
+    margin: 10px;
     font-size: 60px;
     padding: 0%;
     color: rgb(5, 33, 100);
 
 }
-main{
+
+body {
     font-family: sans-serif;
-    background: #84B7FE !important;
+    background: #84B7FE ;
     width: 100vw;
-    margin: 0 auto;
-    padding: 30px 20px;
-    /* min-height: calc(100vh - 60px - 260px); */
+    margin: 0 ;
+    padding: 0;
+    /* min-height: calc(100vh - 60px - 260px);  */
 }
 
 .container {
@@ -25,16 +26,12 @@ main{
 
 }
 
-footer {
-    margin: 148px 0;
-}
-
 .container .box {
     position: relative;
     width: calc(400px - 40px);
     height: calc(300px - 40px);
     background: rgba(18, 107, 240, 0.948);
-  color :black ;
+    color: black;
     float: left;
     margin: 4px;
     box-sizing: border-box;
@@ -42,9 +39,11 @@ footer {
     border-radius: 10px;
     text-align: center;
 }
-h3{
+
+h3 {
     color: black;
 }
+
 .container .box .icon {
     position: absolute;
     top: 0;
@@ -103,9 +102,11 @@ h3{
 
 
 }
-.container .box .content h3 a{
+
+.container .box .content h3 a {
     color: black;
 }
+
 .container .box .content h3 {
     margin: 0;
     padding: 0;
