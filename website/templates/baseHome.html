@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- For footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <nav>
+                <label><a class="logo" href="{{url_for('views.home')}}">SNOOPER</a></label>
+
+                <ul>
+
+                    <li><a href="#"><i class="fa fa-bars"></i></a>
+                        <ul>
+                            <li><a class="active" href="{{url_for('views.userprofile')}}">User Profile</a></li>
+                            <li><a href="#">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% block content %}{% endblock content %}
+    <main>
+
+    </main>
+
+    <footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4><b>About us</b></h4>
+                        <p>Our software aims to make </p>
+                    <p>to detect offense words</p>
+                    
+                    </div>
+                    <div class="footer-col">
+                        <h4><b>Quick Links</b></h4>
+                        <div class="helpfont">
+                            <li>
+                                <a href="{{url_for('views.help')}}">Help</a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <body>
+
+
+                        <div class="footer-col">
+                            <h4><b>Contact us</b></h4>
+                            <div class="social-links">
+                                <li><a href="#">Gmail<i class="glyphicon"> &#x2709;</i></a></li>
+                                <li><a href="#">Phone<i class='fas'>&#xf095;</a> </li>
+                                <li><a href="#">Message<i class='fas'>&#xf4ad;</a> </li>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+
+        </footer>
+</body>
+</html>

@@ -123,6 +123,6 @@ def footer():
 def userprofile():
     return render_template("userprofile.html")
 
-# @views.route("/baseHome")
-# def baseHome():
-#     return render_template("baseHome.html")
+@views.route("/baseHome")
+def baseHome():
+    return render_template("baseHome.html")

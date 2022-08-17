@@ -1,17 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+}
+
+.dropdown {
+    margin: 0 auto;
+
+}
+
+nav {
+    height: 60px;
+    background: #243C6D;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    padding: 5px 0 0 80px;
+    width: 150px;
+    height: auto;
+    top: 10px;
+    color: white;
+    font-size: 45px;
+    color: white;
+    padding: 0 50px;
+    line-height: 50px;
+    font-family: 'Brush Script MT', cursive;
+    top: 2px;
+
+}
+
+/* label.logo a {
+    font-size: 70px;
+    color: white;
+   padding: 0 50px;
+    line-height: 50px; 
+    font-family: 'Brush Script MT', cursive;
+    top: 2px;
+} */
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 130px;
+
+}
+
+nav ul li {
+    background: rgb(231, 226, 226);
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #243C6D;
+    font-size: 4px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 10px;
+    background: #243C6D;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 17px;
+    color: rgb(249, 247, 247);
+}
+
+nav ul li a:hover {
+    background: rgb(180, 221, 249);
+}
+
+nav ul ul {
+    position: absolute;
+    top: 60px;
+    display: none;
+
+}
+
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+/* footer */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 footer {
     line-height: 2.0;
     font-family: 'Poppins', sans-serif;
-    height: 10px;
-    margin: 0;
-    padding: 0;
+    height: 230px;
+    bottom: 0;
     box-sizing: border-box;
     background-color: #243C6D;
-    padding: 20px 0;
+    padding: 0;
     position: relative;
-
-    /* margin: 90px 0; */
+    margin: 90px 0;
 
 }
 
@@ -35,8 +136,7 @@ footer {
 } */
 
 .helpfont a {
-    font-style: italic;
-    font-size: large;
+    font-size: smaller;
     color: white;
 }
 
@@ -70,7 +170,6 @@ ul {
     color: white;
     text-transform: capitalize;
     margin-bottom: 35px;
-    font-weight: 500;
     position: relative;
 
 }

@@ -4,9 +4,9 @@
     width: 100%;
 }
 
-body {
-    background: #84B7FE !important;
-    position: fixed;
+main {
+    background: #84B7FE ;
+    position: relative;
 }
 
 /* 
