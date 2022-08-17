@@ -65,7 +65,7 @@ def SignUp():
         phone_number = request.form.get ('phone_number')
         password = request.form.get ('password')
         occupation = request.form.get ('occupation')
-        date_of_birt = request.form.get ('date_of_birth')
+        date_of_birth = request.form.get ('date_of_birth')
         gender = request.form.get('gender')
 
         if len(first_name) < 2:
