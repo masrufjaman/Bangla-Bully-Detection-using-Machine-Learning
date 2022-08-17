@@ -59,24 +59,24 @@ def reset_pass():
 @views.route("/SignUp" , methods=['GET', 'POST'])
 def SignUp():
     if request.method == 'POST':
-        fname = request.form.get ('fname')
-        lname = request.form.get ('lname')
+        first_name = request.form.get ('first_name')
+        last_name = request.form.get ('last_name')
         email = request.form.get ('email')
-        phoneNumber = request.form.get ('phoneNumber')
-        psw = request.form.get ('psw')
+        phone_number = request.form.get ('phone_number')
+        password = request.form.get ('password')
         occupation = request.form.get ('occupation')
-        dob = request.form.get ('dob')
+        date_of_birt = request.form.get ('date_of_birth')
         gender = request.form.get('gender')
 
-        if len(fname) < 2:
+        if len(first_name) < 2:
             flash('First name must be greater than 1 character.' , category ='error')
-        elif len(lname) < 2:
+        elif len(last_name) < 2:
             flash('Last name must be greater than 1 character.' , category ='error')
         elif len(email) < 4:
             flash('Email must be greater than 4 characters.' , category ='error')
-        elif len(phoneNumber) < 11:
+        elif len(phone_number) < 11:
             flash('Phone number must be eleven digits.' , category ='error')
-        elif len(psw) < 7:
+        elif len(password) < 7:
             flash('Password must be atleast 7 characters' , category ='error')
 
         elif len(occupation) < 6:
