@@ -4,9 +4,15 @@
     width: 100%;
 }
 
-main {
-    background: #84B7FE ;
+body {
+    background: #84B7FE !important;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+/* min-height: calc(100vh - 60px - 250px); */
+    height: 100vh;
     position: relative;
+ 
 }
 
 /* 
