@@ -50,8 +50,21 @@ def home():
    
 @views.route("/login", methods=['GET', 'POST'])
 def login():
-    return render_template("login.html")
+    email = request.form.get('email')
+    password = request.form.get('password')
 
+    sqlconnection = sqlite3.Connection(currentlocation + "\database.db")
+    cursor = sqlconnection.cursor()
+    query1 = "SELECT email, password FROM User Where email = {email} AND password = {password}".format(email=email, password = password)
+
+    rows = cursor.execute(query1)
+    rows = rows.fetchall()
+    if len(rows==1):
+        return render_template("homepage.html")
+    
+    else:
+        return redirect("/login")
+   
 
 @views.route("/ResetPass")
 def reset_pass():
