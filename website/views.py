@@ -50,25 +50,27 @@ def home():
    
 @views.route("/login", methods=['GET', 'POST'])
 def login():
-    email = request.form.get('email')
-    password = request.form.get('password')
 
-    sqlconnection = sqlite3.Connection(currentlocation + "\database.db")
-    cursor = sqlconnection.cursor()
-    query1 = "SELECT email, password FROM User Where email = {email} AND password = {password}".format(email=email, password = password)
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
 
-    rows = cursor.execute(query1)
-    rows = rows.fetchall()
-    if len(rows==1):
-        return render_template("homepage.html")
-    
-    else:
-        return redirect("/login")
+        sqlconnection = sqlite3.Connection(currentlocation + "\database.db")
+        cursor = sqlconnection.cursor()
+        query1 = "SELECT email, password FROM User Where email = {email} AND password = {password}".format(email=email, password = password)
+
+        rows = cursor.execute(query1)
+        rows = rows.fetchall()
+        if len(rows)==1:
+            return render_template("homepage.html")
+        else:
+            return redirect("/login")
+    return render_template("login.html")
    
 
 @views.route("/ResetPass")
 def reset_pass():
-    return render_template("ResetPass.html")
+    return render_template("ResetPass.html",tittle='Reset Password',form=form)
 
 
 @views.route("/SignUp" , methods=['GET', 'POST'])
