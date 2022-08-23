@@ -60,14 +60,14 @@ def login():
 
         sqlconnection = sqlite3.Connection(currentlocation + "\database.db")
         cursor = sqlconnection.cursor()
-        query1 = "SELECT email, password FROM User Where email = {email} AND password = {password}".format(email=email, password = password)
+        query1 = "SELECT email, password FROM User Where email = '"+email+"'AND password = '"+password+"'".format(email=email, password = password)
 
         rows = cursor.execute(query1)
         rows = rows.fetchall()
-        if len(rows)==1:
-            return render_template("homepage.html")
+        if len(rows)==0:
+            print("Invalid username or password")
         else:
-            return redirect("/login")
+            return redirect("/")
     return render_template("login.html")
    
 
@@ -108,8 +108,7 @@ def SignUp():
             
         sqlconnection =sqlite3.Connection(currentlocation + "\database.db")
         cursor = sqlconnection.cursor()
-        id = User.id
-        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}')".format (id = id, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth)
+        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}','{gender}')".format (id = 7, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth, gender = gender)
         cursor.execute(query1)
         sqlconnection.commit()
         return redirect("/")
