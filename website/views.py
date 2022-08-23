@@ -4,6 +4,9 @@ from xmlrpc.client import boolean
 import PyPDF2
 from flask import Flask,flash, Blueprint, render_template, request,url_for,redirect,session
 from sqlalchemy import true
+
+from website.models import User
+from . import db
 from werkzeug.utils import secure_filename
 
 currentlocation = os.path.dirname(os.path.abspath(__file__))
@@ -105,7 +108,8 @@ def SignUp():
             
         sqlconnection =sqlite3.Connection(currentlocation + "\database.db")
         cursor = sqlconnection.cursor()
-        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}')".format(id=1, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth)
+        id = User.id
+        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}')".format (id = id, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth)
         cursor.execute(query1)
         sqlconnection.commit()
         return redirect("/")
