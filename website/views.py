@@ -70,7 +70,7 @@ def login():
 
 @views.route("/ResetPass")
 def reset_pass():
-    return render_template("ResetPass.html",tittle='Reset Password',form=form)
+    return render_template("ResetPass.html",tittle='Reset Password')
 
 
 @views.route("/SignUp" , methods=['GET', 'POST'])
