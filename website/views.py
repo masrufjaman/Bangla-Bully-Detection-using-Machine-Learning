@@ -65,15 +65,27 @@ def login():
         rows = cursor.execute(query1)
         rows = rows.fetchall()
         if len(rows)==0:
-            print("Invalid username or password")
+            flash('Invalid username or password', category ='error')
         else:
             return redirect("/")
     return render_template("login.html")
    
 
-@views.route("/ResetPass")
+@views.route("/ResetPass",  methods=['GET', 'POST'])
 def reset_pass():
-    return render_template("ResetPass.html",tittle='Reset Password')
+
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        sqlconnection = sqlite3.Connection(currentlocation + "\database.db")
+        cursor = sqlconnection.cursor()
+        query1 = "UPDATE User SET password = '"+password+"' WHERE email='"+email+"'".format(email = email,password=password)
+        cursor.execute(query1)
+        sqlconnection.commit()
+        return redirect("/login")
+    return render_template("ResetPass.html")
+
 
 
 @views.route("/SignUp" , methods=['GET', 'POST'])
