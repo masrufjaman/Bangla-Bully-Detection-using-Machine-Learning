@@ -17,17 +17,7 @@
     <header>
         <div class="dropdown">
             <nav>
-                <label><a class="logo" href="{{url_for('views.home')}}">SNOOPER</a></label>
-
-                <ul>
-
-                    <li><a href="#"><i class="fa fa-bars"></i></a>
-                        <ul>
-                            <li><a class="active" href="{{url_for('views.userprofile')}}">User Profile</a></li>
-                            <li><a href="{{url_for('views.logout')}}">Log out</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <label class="logo"><a>SNOOPER</a></label>
             </nav>
         </div>
     </header>
@@ -61,10 +51,10 @@
                 </div>
                 <div class="right box">
                     <div class="topic">For Any Queries</div>
-                    <form action="#">
-                        <input type="text" placeholder="email">
+                    <form action="/baseHome" method="post">
+                        <input type="text" placeholder="Email" name="email" id="email">
                         <!-- <input type="submit" name="" value="Send"> -->
-                        <input type="text" placeholder="Your Queries">
+                        <input type="text" maxlength="300" placeholder="Your Queries" name="message" id="message">
                         <input type="submit" name="" value="Send">
                     </form>
                 </div>

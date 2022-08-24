@@ -19,7 +19,8 @@ def create_app():
     app.register_blueprint(admin, url_prefix='/admin')
     app.register_blueprint(views, url_prefix='/')
 
-    from .models import User
+    from .models import User, Message
+    
 
     create_database(app)
 

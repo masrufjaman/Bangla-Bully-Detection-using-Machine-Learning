@@ -5,7 +5,7 @@ import PyPDF2
 from flask import Flask,flash, Blueprint, render_template, request,url_for,redirect,session
 from sqlalchemy import true
 
-from website.models import User
+from website.models import User, Message
 from . import db
 from werkzeug.utils import secure_filename
 
@@ -137,9 +137,9 @@ def help():
     return render_template("help.html")
 
 
-@views.route("/message")
-def message():
-    return render_template("message.html")
+# @views.route("/message")
+# def message():
+#     return render_template("message.html")
 
 
 @views.route("/upload")
@@ -150,20 +150,30 @@ def upload():
 @views.route("/guidence")
 def guidence():
     return render_template("guidence.html")
-@views.route("/start")
-def start():
-    return render_template("start.html")
-@views.route("/footer")
-def footer():
-    return render_template("footer.html")
+# @views.route("/start")
+# def start():
+#     return render_template("start.html")
+# @views.route("/footer")
+# def footer():
+#     return render_template("footer.html")
 
 @views.route("/userprofile")
 def userprofile():
     return render_template("userprofile.html")
 
-@views.route("/baseHome")
+@views.route("/baseHome", methods=['GET', 'POST'])
 def baseHome():
-    return render_template("baseHome.html")
+    if request.method == 'POST':
+      email = request.form.get ('email')
+      message = request.form.get('message')
+
+      sqlconnection =sqlite3.Connection(currentlocation + "\database.db")
+      cursor = sqlconnection.cursor()
+      query1 = "INSERT INTO Message VALUES('{email}','{message}')".format (email = email, message = message)
+      cursor.execute(query1)
+      sqlconnection.commit()
+      redirect("/login")
+    return render_template("login.html")
 
 @views.route("/logout")
 def logout():

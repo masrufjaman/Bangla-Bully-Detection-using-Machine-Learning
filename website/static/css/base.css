@@ -24,29 +24,14 @@ nav {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    padding: 5px 0 0 80px;
-    width: 150px;
-    height: auto;
-    top: 10px;
+label.logo a {
+    font-size: 50px;
     color: white;
-    font-size: 45px;
-    color: white;
-    padding: 0 50px;
-    line-height: 50px;
-    font-family: 'Brush Script MT', cursive;
-    top: 2px;
-
-}
-
-/* label.logo a {
-    font-size: 70px;
-    color: white;
-   padding: 0 50px;
+    padding: 0 40px;
     line-height: 50px; 
     font-family: 'Brush Script MT', cursive;
     top: 2px;
-} */
+} 
 
 nav ul {
     padding: 0;
