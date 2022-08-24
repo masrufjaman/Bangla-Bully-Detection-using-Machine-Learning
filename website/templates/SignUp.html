@@ -1,4 +1,4 @@
-{% extends 'baseHome.html' %} {% block content %}
+
 <!DOCTYPE html>
 <!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
@@ -11,8 +11,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Header -->
-    </head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
 
+<body>
+    <header>
+          <div class="dropdown">
+            <nav>
+                <label class="logo">SNOOPER</label>
+            </nav>
+        </div>
+    </header>
 {% with messages = get_flashed_messages(with_categories = true) %}
   {% if messages %}
   {% for category, message in messages %}
@@ -102,6 +115,43 @@
 </div>
   
 </body>
-   </html>
-   {% endblock content %}
+
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>Bullying and aggression are increasingly worrisome</p>
+                  <p>phenomena affecting people accros the world.</p>
+                  <p>This is a worldwide problem for all of us</p>
+                  <p>Even Banagli or messages contain various offensive words</p>
+                  <p>Our software amins to detect those bullying and offensive</p>
+                  <p>words.</p>
+                  <p><b>Hope Our software will be able to help you.</b></p>
+                  <p><b>Enjoy! &#128512; </b></p>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>*********</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <div class="topic">For Any Queries</div>
+                <form action="#">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Your Queries">
+                    <input type="submit" name="" value="Send">
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</html>
 
