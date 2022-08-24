@@ -1,4 +1,4 @@
-
+{% extends 'baseHome.html' %} {% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,57 +22,22 @@
 </head>
 
 <body>
-  <header>
-    <div class="dropdown">
-      <nav>
-          <label class="logo">SNOOPER</label>
-      </nav>
-  </div>
-</header>
-
-    <div class="container"> 
-      <form action="/ResetPass" method="post">
+  <div class="container">
+    <form action="/ResetPass" method="post">
       <h1>Reset Password</h1>
-        <label for="email">Email Address</label>
-        <input type="email" placeholder="Enter Email" name="email" id="email" required>
-        <label for="password">New Password</label>
-        <input type="password" placeholder="Enter New Password" maxlength="12" name="password" id="password" required>
-        <button type="submit"><b>Reset</b></button>
-        <div class="signup_link">
-          <!-- <a href="{{url_for('views.login')}}">Back to Log In</a> -->
-        </div>
-      </form>
-    </div>
-</body>
-<body>
-  <footer>
-      <div class="content">
-          <div class="left box">
-              <div class="upper">
-                  <div class="topic">About us</div>
-                  <p>Our software aims to make </p>
-                  <p>to detect offense words</p>
-              </div>
-          </div>
-          <div class="middle box">
-              <div class="lower">
-                  <div class="topic">Contact us</div>
-                  <div class="phone">
-                      <a href="#"><i class="fas fa-phone-volume"></i>*********</a>
-                  </div>
-                  <div class="email">
-                      <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
-                  </div>
-              </div>
-          </div>
-          <div class="right box">
-              <div class="topic">For Any Queries</div>
-              <form action="#">
-                  <input type="text" placeholder="Your Queries">
-                  <input type="submit" name="" value="Send">
-              </form>
-          </div>
+      <label for="email">Email Address</label>
+      <input type="email" placeholder="Enter Email" name="email" id="email" required>
+      <label for="password">New Password</label>
+      <input type="password" placeholder="Enter New Password" maxlength="12" name="password" id="password" required>
+      <button type="submit"><b>Reset</b></button>
+      <div class="signup_link">
+        <!-- <a href="{{url_for('views.login')}}">Back to Log In</a> -->
       </div>
-  </footer>
+    </form>
+  </div>
 </body>
+
+
+
 </html>
+{% endblock content %}
