@@ -163,3 +163,10 @@ def userprofile():
 @views.route("/baseHome")
 def baseHome():
     return render_template("baseHome.html")
+
+@views.route('/details/<int:id>')
+def RetrieveSingleEmployee(id):
+    customer = User.query.filter_by(id=id).first()
+    if customer:
+        return render_template('userdetails.html', customer = customer)
+    return f"Employee with id ={id} Doenst exist"

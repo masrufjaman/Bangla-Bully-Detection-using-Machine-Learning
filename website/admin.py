@@ -11,7 +11,8 @@ def admin_dashboard():
 
 @admin.route('/customers-info')
 def customers_info():
-    return render_template("customers_info.html")
+    customers = User.query.all()
+    return render_template("customers_info.html",customers=customers)
 
 @admin.route('/messages')
 def customer_messages():
