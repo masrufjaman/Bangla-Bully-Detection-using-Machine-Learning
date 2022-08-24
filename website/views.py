@@ -120,7 +120,7 @@ def SignUp():
             
         sqlconnection =sqlite3.Connection(currentlocation + "\database.db")
         cursor = sqlconnection.cursor()
-        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}','{gender}')".format (id = 7, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth, gender = gender)
+        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}','{gender}')".format (id = 2, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth, gender = gender)
         cursor.execute(query1)
         sqlconnection.commit()
         return redirect("/")
@@ -137,11 +137,6 @@ def help():
     return render_template("help.html")
 
 
-# @views.route("/message")
-# def message():
-#     return render_template("message.html")
-
-
 @views.route("/upload")
 def upload():
     return render_template("upload.html")
@@ -150,12 +145,7 @@ def upload():
 @views.route("/guidence")
 def guidence():
     return render_template("guidence.html")
-# @views.route("/start")
-# def start():
-#     return render_template("start.html")
-# @views.route("/footer")
-# def footer():
-#     return render_template("footer.html")
+
 
 @views.route("/userprofile")
 def userprofile():

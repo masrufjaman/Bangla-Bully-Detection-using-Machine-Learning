@@ -6,62 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- For footer -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- For footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
     <header>
         <div class="dropdown">
             <nav>
-                
-                <label class="logo"><a>SNOOPER</a></label>
-
+                <label><a class="logo" href="{{url_for('views.home')}}">SNOOPER</a></label>
             </nav>
         </div>
     </header>
     {% block content %}{% endblock content %}
+    <main>
 
-        <footer>
-            <div class="content">
-                <div class="left box">
-                    <div class="upper">
-                        <div class="topic">About us</div>
-                        <p>Bullying and aggression are increasingly worrisome</p>
-                        <p>phenomena affecting people accros the world.</p>
-                        <p>This is a worldwide problem for all of us</p>
-                        <p>Even Banagli or messages contain various offensive words</p>
-                        <p>Our software amins to detect those bullying and offensive</p>
-                        <p>words.</p>
-                        <p><b>Hope Our software will be able to help you.</b></p>
-                        <p><b>Enjoy! &#128512; </b></p>
-                    </div>
-                </div>
-                <div class="middle box">
-                    <div class="lower">
-                        <div class="topic">Contact us</div>
-                        <div class="phone">
-                            <a href="#"><i class="fas fa-phone-volume"></i>*********</a>
-                        </div>
-                        <div class="email">
-                            <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="right box">
-                    <div class="topic">For Any Queries</div>
-                    <form action="/baseHome" method="post">
-                        <input type="text" placeholder="Email" name="email" id="email">
-                        <!-- <input type="submit" name="" value="Send"> -->
-                        <input type="text" maxlength="300" placeholder="Your Queries" name="message" id="message">
-                        <input type="submit" name="" value="Send">
-                    </form>
+    </main>
+
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>Bullying and aggression are increasingly worrisome</p>
+                  <p>phenomena affecting people accros the world.</p>
+                  <p>This is a worldwide problem for all of us</p>
+                  <p>Even Banagli or messages contain various offensive words</p>
+                  <p>Our software amins to detect those bullying and offensive</p>
+                  <p>words.</p>
+                  <p><b>Hope Our software will be able to help you.</b></p>
+                  <p><b>Enjoy! &#128512; </b></p>
                 </div>
             </div>
-        </footer>
+            <div class="middle box">
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>*********</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <div class="topic">For Any Queries</div>
+                <form action="#">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Your Queries">
+                    <input type="submit" name="" value="Send">
+                </form>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
