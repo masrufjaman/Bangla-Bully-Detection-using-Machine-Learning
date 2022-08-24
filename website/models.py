@@ -13,3 +13,4 @@ class User(db.Model, UserMixin):
     occupation = db.Column(db.String(10))
     date_of_birth =db.Column(db.Date)
     gender = db.Column(db.String(20))
+
