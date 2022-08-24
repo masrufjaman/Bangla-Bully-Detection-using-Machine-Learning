@@ -3,26 +3,31 @@
     width: 100%; 
     padding: 15px 30px;
     border-radius: 5px;
-    position: absolute;
   }
-
 .leftside,
 .rightside {
     height: 100vh;
     width: 100%;
 }
 
-body
-{
+body {
+    background: #84B7FE !important;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #84b7fe !important;;
+/* min-height: calc(100vh - 60px - 250px); */
     height: 100vh;
     position: relative;
-  
+ 
 }
 
+/* 
+.leftside{
+    background: #84B7FE !important;
+}
+.rightside{
+    background: #84B7FE !important;
+}  */
 .leftside textarea {
     padding: 50px 20px;
     position: relative;
@@ -94,3 +99,5 @@ button .btn {
     top: 55%;
     width: 20%;
 }
+
+
