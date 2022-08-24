@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from website.models import User
+from website.models import *
 
 admin = Blueprint('admin', __name__)
 
@@ -16,7 +16,8 @@ def customers_info():
 
 @admin.route('/messages')
 def customer_messages():
-    return render_template("customer_messages.html")
+    messages = Message.query.all()
+    return render_template("customer_messages.html", messages=messages)
 
 @admin.route('/settings')
 def settings():
