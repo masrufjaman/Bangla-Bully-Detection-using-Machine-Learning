@@ -10,6 +10,13 @@
     <input type="date" />
   </div>
 
+  <div>
+    {% for message in messages %}
+    <h2>{{message.email}}</h2>
+    <h4>{{message.message}}</h4>
+    {% endfor %}
+  </div>
+
 
 </main>
 {% endblock content %}
