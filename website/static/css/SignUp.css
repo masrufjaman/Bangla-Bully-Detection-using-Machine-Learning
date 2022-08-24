@@ -13,7 +13,6 @@ body {
   font-family: sans-serif;
   background: #84B7FE !important;
   height: 100vh;
- 
   justify-content: center;
   align-items: center;
   padding: 0px;
@@ -180,19 +179,19 @@ form .button input:hover {
     flex-direction: column;
   }
 }
- form .signup_link
-{
-    margin: 4px 0;
-    text-align: center;
-    font-size:16px;
-    color:black;
+
+form .signup_link {
+  margin: 4px 0;
+  text-align: center;
+  font-size: 16px;
+  color: black;
 }
-.signup_link a
-{
-    color:blue;
-    text-decoration: none;
+
+.signup_link a {
+  color: blue;
+  text-decoration: none;
 }
-.signup_link a:hover
-{
-    text-decoration: underline;
+
+.signup_link a:hover {
+  text-decoration: underline;
 }
