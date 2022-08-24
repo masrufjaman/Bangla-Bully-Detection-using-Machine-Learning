@@ -178,3 +178,10 @@ def baseHome():
 @views.route("/logout")
 def logout():
     return render_template("login.html")
+
+@views.route('/details/<int:id>')
+def RetrieveSingleEmployee(id):
+    customer = User.query.filter_by(id=id).first()
+    if customer:
+        return render_template('userdetails.html', customer = customer)
+    return f"Employee with id ={id} Doenst exist"

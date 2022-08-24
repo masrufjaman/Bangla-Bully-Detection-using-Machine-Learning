@@ -1,0 +1,72 @@
+{% extends 'baseHome.html' %} {% block content %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/userprofile.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <div class="container">
+        <div class="title">User Profile</div>
+        <div class="content">
+
+            <form action="/action_page.php">
+                <!-- <label for="img">Select image:</label>
+                <input type="file" id="img" name="img" accept="image/*"> -->
+
+                <div class="text-center">
+
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail"
+                        alt="avatar">
+                    <label for="img"></label>
+                    <input type="file" id="img" name="img" accept="image/*">
+                </div>
+                <div class="rightbox">
+                    <div class="Profile tabshow">
+
+                        <input type="submit" name="upload" value="upload">
+                        <input type="submit" name="Delete" value="Delete">
+                    </div>
+                </div>
+            </form>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="{{customer.first_name}}" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" placeholder="{{customer.last_name}}" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="{{customer.email}}" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" placeholder="{{customer.first_name}}" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Occupation</span>
+                        <input type="text" placeholder="{{customer.occupation}}" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Gender</span>
+                        <input type="text" placeholder="{{customer.gender}}" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Date Of Birth</span>
+                        <input type="date" value="{{customer.date_of_birth}}" name="party" min="1999-04-01" max="3000-04-30">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock content %}

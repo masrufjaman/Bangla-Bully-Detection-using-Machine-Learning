@@ -76,6 +76,7 @@
     <table>
       <thead>
         <tr>
+          <th>ID</th>
           <th>Name</th>
           <th>Email</th>
           <th>Gender</th>
@@ -85,38 +86,17 @@
         </tr>
       </thead>
       <tbody>
+        {% for customer in customers %}
         <tr>
-          <td>Oishi</td>
-          <td>oishi@gmail.com</td>
-          <td>Female</td>
-          <td>Student</td>
+          <td>{{customer.id}}</td>
+          <td>{{customer.first_name}}</td>
+          <td>{{customer.email}}</td>
+          <td>{{customer.gender}}</td>
+          <td>{{customer.occupation}}</td>
           <td class="warning">Yes</td>
-          <td class="primary">Details</td>
+          <td class="primary"><a href="/details/{{customer.id}}">details</a></td>
         </tr>
-        <tr>
-          <td>Nazifa</td>
-          <td>nazifa@gmail.com</td>
-          <td>Female</td>
-          <td>Student</td>
-          <td class="warning">Yes</td>
-          <td class="primary">Details</td>
-        </tr>
-        <tr>
-          <td>Amrin</td>
-          <td>amrin@gmail.com</td>
-          <td>Female</td>
-          <td>Student</td>
-          <td class="warning">No</td>
-          <td class="primary">Details</td>
-        </tr>
-        <tr>
-          <td>Okita</td>
-          <td>okita@gmail.com</td>
-          <td>Female</td>
-          <td>Student</td>
-          <td class="warning">No</td>
-          <td class="primary">Details</td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
     <a href="#">Show All</a>
