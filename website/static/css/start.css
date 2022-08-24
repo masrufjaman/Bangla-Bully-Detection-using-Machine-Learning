@@ -31,7 +31,7 @@ nav {
 
 }
 
-/* label.logo a {
+label.logo a {
 
     font-size: 70px;
     color: white;
@@ -39,8 +39,8 @@ nav {
     line-height: 50px; 
     font-family: 'Brush Script MT', cursive;
     top: 2px;
-} */
-/* 
+} 
+
 nav ul {
     padding: 0;
     margin: 0;
@@ -91,4 +91,4 @@ nav ul ul li {
     float: none;
     display: list-item;
     position: relative;
-} */ 
+} 
