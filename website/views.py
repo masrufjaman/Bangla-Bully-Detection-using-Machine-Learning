@@ -120,7 +120,7 @@ def SignUp():
             
         sqlconnection =sqlite3.Connection(currentlocation + "\database.db")
         cursor = sqlconnection.cursor()
-        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}','{gender}')".format (id = 2, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth, gender = gender)
+        query1 = "INSERT INTO User VALUES('{id}','{first_name}','{last_name}','{email}','{phone_number}','{password}','{occupation}','{date_of_birth}','{gender}')".format (id = 6, first_name = first_name, last_name = last_name, email = email, phone_number = phone_number, password = password, occupation = occupation, date_of_birth = date_of_birth, gender = gender)
         cursor.execute(query1)
         sqlconnection.commit()
         return redirect("/")
