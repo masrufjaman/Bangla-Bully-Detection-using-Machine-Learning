@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> Sign Up </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/SignUp.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Header -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+          <div class="dropdown">
+            <nav>
+                <label class="logo">SNOOPER</label>
+            </nav>
+        </div>
+    </header>
+{% with messages = get_flashed_messages(with_categories = true) %}
+  {% if messages %}
+  {% for category, message in messages %}
+  {% if category == 'error' %}
+  <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% else %}
+  <div class="alert alert-success alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endwith %} 
+  <div class="container">
+    <div class="title">Sign Up for your snooper account</div>
+    <div class="content">
+      <form action="/SignUp" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" placeholder="Enter your first name" name ="first_name" id="first_name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" placeholder="Enter your last name" name="last_name" id="last_name" required>
+                </div>
+                
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Enter your email" name="email" id="email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" placeholder="Enter your phone number" name="phone_number" id="phone_number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter the password" maxlength="12" name="password" id="password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Occupation</span>
+                    <input type="text" placeholder="Student/Employee/Businessman" name="occupation" id="occupation" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date Of Birth</span>
+                    <input type="date" name="date_of_birth" id="date_of_birth" min="1950-01-01" max="2012-01-30">
+                </div>
+            </div>
+            <div class="gender-details" name="gender">
+                <input type="radio" name="gender" id="dot-1" value="Male"></input>
+                <input type="radio" name="gender" id="dot-2" value="Female"></input>
+                <input type="radio" name="gender" id="dot-3" value="Prefered not to say"></input>
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                      <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                      </label> 
+                     <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                     </label>
+                     
+                  <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefered not to say</span>
+                    </label>
+                    
+                </div>
+            </div> 
+            <div class="button">
+                <input type="submit" value="Sign Up">
+             </div>
+             <div class="signup_link">
+              <a href="{{url_for('views.login')}}">Back to log In</a>
+           </div>
+        </form>
+    </div>
+</div>
+  
+</body>
+
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>Bullying and aggression are increasingly worrisome</p>
+                  <p>phenomena affecting people accros the world.</p>
+                  <p>This is a worldwide problem for all of us</p>
+                  <p>Even Banagli or messages contain various offensive words</p>
+                  <p>Our software amins to detect those bullying and offensive</p>
+                  <p>words.</p>
+                  <p><b>Hope Our software will be able to help you.</b></p>
+                  <p><b>Enjoy! &#128512; </b></p>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>*********</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <div class="topic">For Any Queries</div>
+                <form action="#">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Your Queries">
+                    <input type="submit" name="" value="Send">
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</html>
+

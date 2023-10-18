@@ -1,0 +1,69 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #84b7fe !important;;
+    height: 100vh;
+    position: relative;
+  
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  /* background-color: #84B7FE; */
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+.container h1
+{
+    text-align: center;
+    padding: 10px;
+    color:black;
+    margin: 10px;
+    font-size: 20px;
+}
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #84B7FE;
+    border: 1px solid;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  .container button {
+    background-color: whitesmoke;
+    color: black;
+    padding:10px 0px;
+    height: 50px;
+    margin: 30px 0px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+    background-color: rgb(5, 33, 100);
+  }
+  
+ .signup_link
+{
+    margin:10px 0px;
+    text-align: center;
+    font-size:16px;
+    color:black;
+}
+.signup_link a
+{
+    color:blue;
+    text-decoration: none;
+}
+.signup_link a:hover
+{
+    text-decoration: underline;
+}

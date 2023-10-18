@@ -1,0 +1,106 @@
+{% extends 'base_admin.html' %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/admin_dashboard.css') }}"
+/>
+<main>
+  <h1>Dashboard</h1>
+
+  <div class="date">
+    <input type="date" />
+  </div>
+
+  <div class="insights">
+    <div class="total-customer">
+      <span class="material-icons-sharp"> supervisor_account </span>
+      <div class="middle">
+        <div class="left">
+          <h3>Total Customer</h3>
+          <h1>110,000</h1>
+        </div>
+        <div class="progress">
+          <svg>
+            <circle cx="38" cy="38" r="36"></circle>
+          </svg>
+          <div class="number">
+            <p>81%</p>
+          </div>
+        </div>
+      </div>
+      <small class="text-muted">Last 24hours</small>
+    </div>
+    <!-- END OF TOTAL CUSTOMER -->
+    <div class="total-detection">
+      <span class="material-icons-sharp"> bar_chart </span>
+      <div class="middle">
+        <div class="left">
+          <h3>Total Detection</h3>
+          <h1>110,000</h1>
+        </div>
+        <div class="progress">
+          <svg>
+            <circle cx="38" cy="38" r="36"></circle>
+          </svg>
+          <div class="number">
+            <p>62%</p>
+          </div>
+        </div>
+      </div>
+      <small class="text-muted">Last 24hours</small>
+    </div>
+    <!-- END OF TOTAL Detection -->
+    <div class="premium-customer">
+      <span class="material-icons-sharp"> stacked_line_chart </span>
+      <div class="middle">
+        <div class="left">
+          <h3>Premium Customer</h3>
+          <h1>110,000</h1>
+        </div>
+        <div class="progress">
+          <svg>
+            <circle cx="38" cy="38" r="36"></circle>
+          </svg>
+          <div class="number">
+            <p>44%</p>
+          </div>
+        </div>
+      </div>
+      <small class="text-muted">Last 24hours</small>
+    </div>
+    <!-- END OF Today sign-in -->
+  </div>
+  <!-- END OF INSIGHTS -->
+
+  <div class="recent-customers">
+    <h2>Recent Customer</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Occupation</th>
+          <th>Premium</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for customer in customers %}
+        <tr>
+          <td>{{customer.id}}</td>
+          <td>{{customer.first_name}}</td>
+          <td>{{customer.email}}</td>
+          <td>{{customer.gender}}</td>
+          <td>{{customer.occupation}}</td>
+          <td class="warning">Yes</td>
+          <td class="primary"><a href="/details/{{customer.id}}">details</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="#">Show All</a>
+  </div>
+</main>
+{% endblock content %}
+<!-- END OF MAIN -->

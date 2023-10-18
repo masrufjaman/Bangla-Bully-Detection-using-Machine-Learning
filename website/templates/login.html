@@ -1,0 +1,41 @@
+{% extends 'baseHome.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <!-- stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/login.css') }}"
+    />
+    <!-- materials icon -->
+    <!-- https://fonts.google.com/icons?icon.style=Sharp&icon.query=close -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"/>
+</head>
+ <body>
+        <div class="container"> 
+        <form action="/login" method="post">
+        <h1>Log In to your Account</h1>
+
+    <label for="email">Email Address</label>
+          <input type="email" placeholder="Enter Email" name="email" id="email" required>
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter Password" name="password" maxlength="12" id="password" required>
+          <button type="submit"><b>Submit</b></button>
+        <div class="signup_link">
+         No Account? Sign Up <a href="{{url_for('views.SignUp')}}">Here</a>
+       <br><a href="{{url_for('views.reset_pass')}}">Reset Password?</a>
+        
+      </div>
+       </div> 
+      </form>
+    </div>
+    
+  </body>
+        </html>
+        {% endblock content %}

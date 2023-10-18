@@ -1,0 +1,103 @@
+.container{
+    max-width: 700px;
+    width: 100%; 
+    padding: 15px 30px;
+    border-radius: 5px;
+  }
+.leftside,
+.rightside {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    background: #84B7FE !important;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+/* min-height: calc(100vh - 60px - 250px); */
+    height: 100vh;
+    position: relative;
+ 
+}
+
+/* 
+.leftside{
+    background: #84B7FE !important;
+}
+.rightside{
+    background: #84B7FE !important;
+}  */
+.leftside textarea {
+    padding: 50px 20px;
+    position: relative;
+    height: 450px;
+    width: 550px;
+    top: 80px;
+    left:20px;
+    text-align: left;
+    border: 2px solid #B2BEB5;
+    background-color: white;
+}
+
+.rightside p {
+    padding: 50px 20px;
+    position: relative;
+    height: 450px;
+    width: 550px;
+    top: 80px;
+    left:10px;
+    text-align: left;
+    border: 2px solid #B2BEB5;
+    background-color: white;
+
+}
+
+button {
+    background-color: #1560BD;
+    color: white;
+    position: absolute;
+    bottom: 110px;
+    right: 20px;
+    height: 40px;
+    border: 2px solid white;
+    text-align: center;
+    cursor: pointer;
+    width: 20%;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    left: 18%;
+    bottom: 3%;
+
+}
+
+button .btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper button {
+    position: relative;
+    bottom: 0%;
+    border: 1px solid gray;
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+    font-size: 19px;
+    display: inline-block;
+    text-align: center;
+    left: 0%;
+    top: 55%;
+    width: 20%;
+}
+
+

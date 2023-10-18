@@ -1,0 +1,36 @@
+{% extends 'baseHome.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset Password</title>
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ResetPass.css') }}" />
+  <!-- materials icon -->
+  <!-- https://fonts.google.com/icons?icon.style=Sharp&icon.query=close -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- header -->
+  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/start.css')}}"> -->
+</head>
+
+<body>
+  <div class="container">
+    <form action="/ResetPass" method="post">
+      <h1>Reset Password</h1>
+        <label for="email">Email Address</label>
+        <input type="email" placeholder="Enter Email" name="email" id="email" required>
+        <label for="password">New Password</label>
+        <input type="password" placeholder="Enter New Password" maxlength="12" name="password" id="password" required>
+        <button type="submit"><b>Reset</b></button>
+        <div class="signup_link">
+          <a href="{{url_for('views.login')}}">Back to log In</a>
+        </div>
+      </form>
+    </div>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,123 @@
+h1 {
+    text-align: center;
+    text-decoration: solid;
+    font-style: normal;
+    margin: 10px;
+    font-size: 60px;
+    padding: 0%;
+    color: rgb(5, 33, 100);
+
+}
+
+body {
+    font-family: sans-serif;
+    background: #84B7FE ;
+    width: 100vw;
+    margin: 0 ;
+    padding: 0;
+    /* min-height: calc(100vh - 60px - 260px);  */
+}
+
+.container {
+    position: relative;
+    width: 1250px;
+    height: 350px;
+    margin: 25px auto;
+
+}
+
+.container .box {
+    position: relative;
+    width: calc(400px - 40px);
+    height: calc(300px - 40px);
+    background: rgba(18, 107, 240, 0.948);
+    color: black;
+    float: left;
+    margin: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+}
+
+.container .box .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(5, 33, 100);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.container .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container .box .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: aquamarine;
+}
+
+.container .box:hover .icon .fa {
+    font-size: 40px;
+
+}
+
+.container .box .content {
+    position: absolute;
+    top: 100px;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+
+}
+
+.container .box:hover .content {
+    top: 100px;
+}
+
+.container .box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: black;
+    font-size: 30px;
+
+
+}
+
+.container .box .content h3 a {
+    color: black;
+}
+
+.container .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+
+}
+
+.container .box .content p {
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+}
